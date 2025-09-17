@@ -1,11 +1,21 @@
 import React from 'react'
-
+import logo from '../assets/Images/logo.png'
 const Navbar = () => {
   return (
     <>
-    <div className="container">
-      <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, animi sint quas rem suscipit sequi quisquam earum alias maiores sit commodi quia autem distinctio odit eius magnam ab fugiat? Nesciunt?</h2>
+<section id='Navbar'>
+<div className="container">
+  <div className="navRow">
+    <div className="logo">
+      <img src={logo} alt="logoImg" />
     </div>
+    <div className="search w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] ">
+      
+    </div>
+    <div className="buttons"></div>
+  </div>
+</div>
+</section>
     </>
   )
 }

@@ -2,3 +2,10 @@
 @utility container {
   margin-inline: auto;
 }
+
+@theme{
+  --font-poppins:  "Poppins", sans-serif;
+  --color-primery: #111827;
+  
+
+}
