@@ -10,7 +10,22 @@ const Hero = () => {
       <section id="Hero">
         <div className="container">
 <div className="heroRow  w-full h-[98px] bg-[#FFF] rounded-[16px] border border-[#E5E7EB] flex justify-between items-center px-10 mt-13">
-     
+            {/* -------shipping------ */}
+            <div className="shipping flex gap-5 items-center">
+              <div className="img w-6 h-6">
+                <img src={hero1} alt="hero1" />
+              </div>
+              <div className="content">
+                <h2 className="text-xl text-primery font-medium font-poppins">
+                  Free shipping
+                </h2>
+                <p className="text-sm text-[#4B5563] font-medium font-poppins">
+                  On orders over $50.00
+                </p>
+              </div>
+            </div>
+
+          
         </div>
       </section>
     </>
