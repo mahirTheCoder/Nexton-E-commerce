@@ -27,6 +27,15 @@ const Cart = () => {
             </div>
           </div>
 
+          {/* ----------chrakout button and product sum ----- */}
+           <div className="subTotal flex justify-between py-5">
+            <p className="text-base font-normal font-poppins text-black">SubTotal</p>
+            <p className="text-base font-medium font-poppins text-black">$350</p>
+           </div>
+
+
+
+        
         </div>
       </section>
     </>
