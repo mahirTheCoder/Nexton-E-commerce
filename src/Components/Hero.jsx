@@ -43,7 +43,25 @@ const Hero = () => {
               </div>
             </div>
 
-      
+            {/* ----------- delivery--------- */}
+            <div className="return flex gap-3">
+              <div className="border-l-[3px] h-12.5 border-[#E5E7EB]"></div>
+              <div className="shipping flex gap-5 items-center">
+                <div className="img w-6 h-6">
+                  <img src={hero3} alt="hero1" />
+                </div>
+                <div className="content">
+                  <h2 className="text-xl text-primery font-medium font-poppins">
+                    Worldwide delivery
+                  </h2>
+                  <p className="text-sm text-[#4B5563] font-medium font-poppins">
+                    Fast delivery worldwide
+                  </p>
+                </div>
+              </div>
+            </div>
+
+ 
         </div>
       </section>
     </>
