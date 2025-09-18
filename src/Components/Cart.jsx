@@ -9,12 +9,14 @@ const Cart = ({ isOpen, closeCart }) => {
         className={` h-screen absolute top-0  right-0 ${
           isOpen ? "w-full" : "w-0"
         } duration-1000 overflow-hidden  `}
+
       >
         {/* -------side click-------- */}
         <div
           onClick={closeCart}
           className="w-full h-screen bg-[#0000004e]"
         ></div>
+
 
         {/* ----------slid cart--------- */}
         <div
@@ -23,6 +25,7 @@ const Cart = ({ isOpen, closeCart }) => {
           } p-5 overflow-hidden`}
         >
           <h2 className="text-xl font-poppins font-medium text-[#000]">Cart</h2>
+          
 
           {/* ---------cart items -------- */}
           <div className="w-full h-[90%] overflow-y-scroll">
@@ -105,6 +108,7 @@ const Cart = ({ isOpen, closeCart }) => {
             </div>
           </div>
 
+
           {/* ----------chrakout button and product sum ----- */}
           <div className="subTotal flex justify-between py-2">
             <p className="text-base font-normal font-poppins text-black">
@@ -114,6 +118,7 @@ const Cart = ({ isOpen, closeCart }) => {
               $350
             </p>
           </div>
+
 
           {/* ----------cheakout Button */}
           <Link

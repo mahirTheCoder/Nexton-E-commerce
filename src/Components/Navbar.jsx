@@ -15,12 +15,17 @@ const [showCart , setShowCArt ] = useState (false)
       <section id="Navbar">
         <div className="container">
           <nav>
-            <div className="navRow flex justify-between py-7">
+            <div className="nav-row flex justify-between py-7">
+
+              {/* -------------logo part---------- */}
               <div className="logo">
                 <Link to={'/'}>
                 <img src={logo} alt="logoImg" />
                 </Link>
               </div>
+
+
+              {/* -----------input search------------- */}
               <div className="search w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] flex gap-2 items-center px-6">
                 <CiSearch className="text-xl text-[#4B5563]" />
 
@@ -30,6 +35,8 @@ const [showCart , setShowCArt ] = useState (false)
                   className="text-[#4B5563] w-full border-none outline-none font-poppins"
                 />
               </div>
+
+              {/* ------------------cart buttons------------- */}
               <div className="buttons flex gap-4.5">
                 <button>
                   <RiUser3Line className="text-2xl text-[#4B5563] " />

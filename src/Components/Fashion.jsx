@@ -8,6 +8,9 @@ const Fashion = () => {
 <section id="fashion">
         <div className="container w-full h-[437px] bg-[#F5F5F5] rounded-[24px] mt-30 mb-13">
           <div className="fasion-menu-row flex justify-between flex-wrap ">
+
+
+            {/* -----------test part-------- */}
             <div className="content pt-[94px] pl-30">
               <p className="text-sm text-[#4B5563] font-poppins font-normal mb-3.5 ">
                 100% Original Products
@@ -18,6 +21,9 @@ const Fashion = () => {
               <p  className="text-sm text-[#4B5563] font-poppins font-normal mb-6 ">Starting from: $59.99</p>
               <Link className="w-[144px] h-[52px] bg-primery text-white flex justify-center items-center rounded-4xl" to={'/'}>Shop now</Link>
             </div>
+
+
+            {/* -----------img part------- */}
             <div className="fashionImg pr-24">
               <img src={fashionImg} alt="fasion img" />
             </div>

@@ -9,7 +9,9 @@ const Hero = () => {
     <>
       <section id="Hero">
         <div className="container">
-<div className="heroRow  w-full h-[98px] bg-[#FFF] rounded-[16px] border border-[#E5E7EB] flex justify-between items-center px-10 mt-13">
+          <div className="heroRow  w-full h-[98px] bg-[#FFF] rounded-[16px] border border-[#E5E7EB] flex justify-between items-center px-10 mt-13">
+
+            
             {/* -------shipping------ */}
             <div className="shipping flex gap-5 items-center">
               <div className="img w-6 h-6">
@@ -79,7 +81,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-      
         </div>
       </section>
     </>
