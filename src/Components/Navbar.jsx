@@ -19,7 +19,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search in products..."
-                className="text-[#4B5563] w-full font-poppins"
+                className="text-[#4B5563] w-full border-none outline-none font-poppins"
               />
             </div>
             <div className="buttons flex gap-4.5">
