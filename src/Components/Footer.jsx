@@ -1,11 +1,14 @@
 import React from "react";
 import logo from "../assets/Images/logo.png";
-import { Link } from "react-router";
+import { Link, Links } from "react-router";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { BsTelegram } from "react-icons/bs";
 import { FaTwitterSquare } from "react-icons/fa";
-
+import visa from "../assets/Images/visa.png";
+import paypal from "../assets/Images/paypal.png";
+import stripe from "../assets/Images/stripe.png";
+import verisign from "../assets/Images/verisign.png";
 const Footer = () => {
   return (
     <>
@@ -42,7 +45,7 @@ const Footer = () => {
               </a>
 
               <a className="flex gap-2 items-center mb-3 " href="#">
-                <FaFacebook className="text-[#4676ED] text-xl" />
+                <FaTwitterSquare className="text-[#4676ED] text-xl" />
                 <p className="text-xs font-normal font-poppins text-primery ">
                   FaTwitterSquare
                 </p>
@@ -144,8 +147,33 @@ const Footer = () => {
                 API Reference
               </a>
             </div>
+
+            {/* ----------------footer payment methood----------- */}
+
+            
           </div>
-         
+          <div className="under-Line mb-[2px] h-[2px] bg-[#E7E7E7] "></div>
+          <div className="payment-methood py-9 flex items-center justify-between">
+            <div className="text-part">
+              <p className="text-base text-primery font-normal font-poppins ">
+                Nexton eCommerce. © 2024
+              </p>
+            </div>
+            <div className="payment-part flex gap-2">
+              <a href="#">
+                <img src={visa} alt="visa" />
+              </a>
+              <a href="#">
+                <img src={paypal} alt="paypal" />
+              </a>
+              <a href="#">
+                <img src={stripe} alt="stripe" />
+              </a>
+              <a href="#">
+                <img src={verisign} alt="verysign" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>
