@@ -9,8 +9,8 @@ const Hero = () => {
     <>
       <section id="Hero">
         <div className="container">
-
-      
+<div className="heroRow  w-full h-[98px] bg-[#FFF] rounded-[16px] border border-[#E5E7EB] flex justify-between items-center px-10 mt-13">
+     
         </div>
       </section>
     </>
