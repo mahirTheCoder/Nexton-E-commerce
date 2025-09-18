@@ -4,12 +4,12 @@ import { Link } from "react-router";
 const Cart = ({isOpen, closeCart}) => {
   return (
     <>
-      <section id="Cart" className={`w-full h-screen absolute top-0  ${isOpen?"right-0": 'right-[-100%]'} duration-700 `}>
+      <section id="Cart" className={` h-screen absolute top-0  right-0 ${isOpen? "w-full" : "w-0"} duration-1000 overflow-hidden  `}>
         {/* -------side click-------- */}
         <div onClick={closeCart} className="w-full h-screen bg-[#0000004e]"></div>
 
         {/* ----------slid cart--------- */}
-        <div className="w-[400px] h-screen bg-white absolute top-0 right-0 p-5">
+        <div className={`w-[400px] h-screen bg-white absolute top-0 right-0 ${isOpen? "translate-x-0" : "translate-x-full"} p-5 overflow-hidden`}>
           <h2 className="text-xl font-poppins font-medium text-[#000]">Cart</h2>
 
           {/* ---------cart items -------- */}
