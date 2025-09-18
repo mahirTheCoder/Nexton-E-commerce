@@ -36,7 +36,7 @@ const Cart = ({isOpen, closeCart}) => {
 
 
            {/* ----------cheakout Button */}
-          <Link className="w-full py-3 bg-[#111827] inline-block text-base font-medium font-poppins  text-white text-center rounded-xl active:scale-[1.1]" to={'/'}>Cheakout</Link>
+          <Link onClick={closeCart} className="w-full py-3 bg-[#111827] inline-block text-base font-medium font-poppins  text-white text-center rounded-xl active:scale-[1.1]" to={'/Checkout'}>Cheakout</Link>
         </div>
       </section>
     </>

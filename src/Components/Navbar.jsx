@@ -4,6 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiUser3Line } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import Cart from "./Cart";
+import { Link } from "react-router";
 
 const Navbar = () => {
 const [showCart , setShowCArt ] = useState (false)
@@ -16,7 +17,9 @@ const [showCart , setShowCArt ] = useState (false)
           <nav>
             <div className="navRow flex justify-between py-7">
               <div className="logo">
+                <Link to={'/'}>
                 <img src={logo} alt="logoImg" />
+                </Link>
               </div>
               <div className="search w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] flex gap-2 items-center px-6">
                 <CiSearch className="text-xl text-[#4B5563]" />
