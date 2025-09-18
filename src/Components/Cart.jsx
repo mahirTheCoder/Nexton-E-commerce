@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
 
-const Cart = () => {
+const Cart = ({isOpen, closeCart}) => {
   return (
     <>
-      <section id="Cart" className="w-full h-screen absolute top-0 left-0">
+      <section id="Cart" className={`w-full h-screen absolute top-0  ${isOpen?"right-0": 'right-[-100%]'} duration-700 `}>
         {/* -------side click-------- */}
-        <div className="w-full h-screen bg-[#0000004e]"></div>
+        <div onClick={closeCart} className="w-full h-screen bg-[#0000004e]"></div>
 
         {/* ----------slid cart--------- */}
         <div className="w-[400px] h-screen bg-white absolute top-0 right-0 p-5">
@@ -28,7 +28,7 @@ const Cart = () => {
           </div>
 
           {/* ----------chrakout button and product sum ----- */}
-           <div className="subTotal flex justify-between py-5">
+           <div className="subTotal flex justify-between py-2">
             <p className="text-base font-normal font-poppins text-black">SubTotal</p>
             <p className="text-base font-medium font-poppins text-black">$350</p>
            </div>
@@ -36,7 +36,7 @@ const Cart = () => {
 
 
            {/* ----------cheakout Button */}
-          <Link className="w-full py-3 bg-[#111827] inline-block text-base font-medium font-poppins  text-white text-center rounded-2xl active:scale-[1.1]" to={'/'}>Cheakout</Link>
+          <Link className="w-full py-3 bg-[#111827] inline-block text-base font-medium font-poppins  text-white text-center rounded-xl active:scale-[1.1]" to={'/'}>Cheakout</Link>
         </div>
       </section>
     </>
