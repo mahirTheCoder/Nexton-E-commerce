@@ -3,6 +3,8 @@ import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router";
+import CommonHead from "./CommonHead";
 
 const SimpleSlider = () => {
   const settings = {
@@ -11,136 +13,149 @@ const SimpleSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false
+    arrows: false,
   };
 
   return (
     <>
       <section id="slider" className="mt-[88px]">
         <div className="container">
-         <div className="header flex mb-10">
-          <h2 className="text-[36px] font-semibold font-poppins text-primery ">Start exploring.</h2>
-          <h2 className="text-[36px] font-semibold font-poppins text-[#4B5563] ">Good things are waiting for you</h2>
-         </div>
-        <div className="slider-container">
-          <Slider {...settings}>
 
+          {/* --------common head -------- */}
+          <div className="common-head">
+            <CommonHead common1={'Start exploring. '} common2={' Good things are waiting for you'} />
+          </div>
 
-            <div>
-              <div className="w-[418px] h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
-                <div className="part1">
-                  <h2 className="text-2xl font-medium text-primery font-poppins">
-                    For Men's
-                  </h2>
-                  <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                    Starting at $24
-                  </p>
-                </div>
-                <div className="par2 flex gap-5">
-                  <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
-                  <div className="flex gap-2 items-center">
+          {/* ----------slider---------
+           */}
+          <div className="slider-container">
+            <Slider {...settings}>
+              <div>
+                <div className="w-[418px] h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                  <div className="part1">
+                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                      For Men's
+                    </h2>
                     <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                      Shop Now
+                      Starting at $24
                     </p>
-                    <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                  </div>
+                  <div className="par2 flex gap-5">
+                    <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
+                    <div className="flex gap-2 items-center">
+                      <Link
+                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        to={"/"}
+                      >
+                        Shop Now
+                      </Link>
+                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-
-            <div>
-              <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
-                <div className="part1">
-                  <h2 className="text-2xl font-medium text-primery font-poppins">
-                    For Women's
-                  </h2>
-                  <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                    Starting at $19
-                  </p>
-                </div>
-                <div className="par2 flex gap-5">
-                  <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
-                  <div className="flex gap-2 items-center">
+              <div>
+                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                  <div className="part1">
+                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                      For Women's
+                    </h2>
                     <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                      Shop Now
+                      Starting at $19
                     </p>
-                    <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                  </div>
+                  <div className="par2 flex gap-5">
+                    <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
+                    <div className="flex gap-2 items-center">
+                      <Link
+                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        to={"/"}
+                      >
+                        Shop Now
+                      </Link>
+                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-
-            <div>
-              <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
-                <div className="part1">
-                  <h2 className="text-2xl font-medium text-primery font-poppins">
-                    Accessories
-                  </h2>
-                  <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                    Explore accessories
-                  </p>
-                </div>
-                <div className="par2 flex gap-5">
-                  <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
-                  <div className="flex gap-2 items-center">
+              <div>
+                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                  <div className="part1">
+                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                      Accessories
+                    </h2>
                     <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                      Shop Now
+                      Explore accessories
                     </p>
-                    <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                  </div>
+                  <div className="par2 flex gap-5">
+                    <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
+                    <div className="flex gap-2 items-center">
+                      <Link
+                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        to={"/"}
+                      >
+                        Shop Now
+                      </Link>
+                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-
-            <div>
-              <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
-                <div className="part1">
-                  <h2 className="text-2xl font-medium text-primery font-poppins">
-                    For Men's
-                  </h2>
-                  <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                    Starting at $24
-                  </p>
-                </div>
-                <div className="par2 flex gap-5">
-                  <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
-                  <div className="flex gap-2 items-center">
+              <div>
+                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                  <div className="part1">
+                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                      For Men's
+                    </h2>
                     <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                      Shop Now
+                      Starting at $24
                     </p>
-                    <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                  </div>
+                  <div className="par2 flex gap-5">
+                    <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
+                    <div className="flex gap-2 items-center">
+                      <Link
+                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        to={"/"}
+                      >
+                        Shop Now
+                      </Link>
+                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            
-            <div>
-              <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
-                <div className="part1">
-                  <h2 className="text-2xl font-medium text-primery font-poppins">
-                    For Women's
-                  </h2>
-                  <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                    Starting at $19
-                  </p>
-                </div>
-                <div className="par2 flex gap-5">
-                  <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
-                  <div className="flex gap-2 items-center">
+              <div>
+                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                  <div className="part1">
+                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                      For Women's
+                    </h2>
                     <p className="text-sm text-[#4B5563] font-normal font-poppins">
-                      Shop Now
+                      Starting at $19
                     </p>
-                    <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                  </div>
+                  <div className="par2 flex gap-5">
+                    <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
+                    <div className="flex gap-2 items-center">
+                      <Link
+                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        to={"/"}
+                      >
+                        Shop Now
+                      </Link>
+                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Slider>
-        </div>
+            </Slider>
+          </div>
         </div>
       </section>
     </>

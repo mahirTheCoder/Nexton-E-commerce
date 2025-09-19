@@ -8,7 +8,7 @@ const Cart = ({ isOpen, closeCart }) => {
         id="Cart"
         className={` h-screen absolute top-0  right-0 ${
           isOpen ? "w-full" : "w-0"
-        } duration-1000 overflow-hidden  `}
+        } duration-1000 overflow-hidden z-20 `}
 
       >
         {/* -------side click-------- */}
@@ -22,7 +22,7 @@ const Cart = ({ isOpen, closeCart }) => {
         <div
           className={`w-[400px] h-screen bg-white absolute top-0 right-0 ${
             isOpen ? "translate-x-0" : "translate-x-full"
-          } p-5 overflow-hidden`}
+          } p-5 overflow-hidden z-20`}
         >
           <h2 className="text-xl font-poppins font-medium text-[#000]">Cart</h2>
           
