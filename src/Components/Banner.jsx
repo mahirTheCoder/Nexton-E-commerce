@@ -20,7 +20,12 @@ const Banner = () => {
     <section id='Banner' className='Banner w-full'>
      <div className="slider-container w-full">
       <Slider {...settings}>
-     
+        <div>
+          <Link  to={'/'}>
+          <img className='w-full' src={banner} alt="banner" />
+          </Link>
+        </div>
+       
        
       </Slider>
     </div>
