@@ -30,7 +30,12 @@ const Banner = () => {
           <img className='w-full' src={banner} alt="banner" />
           </Link>
         </div>
-       
+        <div>
+          <Link to={'/'}>
+          <img className='w-full' src={banner} alt="banner" />
+          </Link>
+        </div>
+   
        
       </Slider>
     </div>
