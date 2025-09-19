@@ -18,6 +18,12 @@ const Banner = () => {
   return (
     <>
     <section id='Banner' className='Banner w-full'>
+     <div className="slider-container w-full">
+      <Slider {...settings}>
+     
+       
+      </Slider>
+    </div>
 
     </section>
     </>
