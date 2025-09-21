@@ -3,6 +3,7 @@ import Hero from '../Components/Hero'
 import SimpleSlider from '../Components/SimpleSlider'
 import Fashion from '../Components/Fashion'
 import Banner from '../Components/Banner'
+import Recommended from '../Components/Recommended'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Banner/>
       <Hero/>
       <SimpleSlider/>
+      <Recommended/>
       <Fashion/>
     </div>
   )
