@@ -17,7 +17,17 @@ const RecCArt = () => {
           <h2 className="text-base font-semibold font-poppins text-primery ">Black Automatic Watch</h2>
           <h2 className="text-base font-semibold font-poppins text-primery ">$169.99</h2>
         </div>
-     
+        <div className="accesoris flex justify-between mb-4">
+          <p className="text-sm font-normal font-poppins text-[#4B5563]">Accessories</p>
+          <p className="text-sm font-normal font-poppins text-[#4B5563]">$199.99</p>
+        </div>
+        <div className="accesoris flex ">
+          <div className="star">
+            
+          </div>
+          <p className="text-sm font-normal font-poppins text-[#4B5563]">$199.99</p>
+        </div>
+      </div>
     </>
   );
 };
