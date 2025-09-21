@@ -28,7 +28,7 @@ const Recommended = () => {
 
           <div className="recommended-items flex flex-wrap gap-30">
             {allproducts.map((item) => (
-              <RecCArt key={item.id}  img={item.thumbnail}/>
+              <RecCArt key={item.id}  img={item.thumbnail} title={item.title} price={item.price} catagory={item.category} discount={item.discountPercentage} rating={item.rating} stock={item.stock}/>
             ))}
           </div>
         </div>
