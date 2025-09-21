@@ -1,5 +1,6 @@
 import React from "react";
 import CommonHead from "./CommonHead";
+import { FaStar } from "react-icons/fa6";
 
 const RecCArt = () => {
   return (
@@ -21,11 +22,12 @@ const RecCArt = () => {
           <p className="text-sm font-normal font-poppins text-[#4B5563]">Accessories</p>
           <p className="text-sm font-normal font-poppins text-[#4B5563]">$199.99</p>
         </div>
-        <div className="accesoris flex ">
-          <div className="star">
-            
+        <div className="accesoris flex gap-2 ">
+          <div className="star flex gapp-1">
+            <FaStar className="text-xl text-[#FBBF24]"/>
+             <p className="text-sm font-normal font-poppins text-[#4B5563]">4.9</p>
           </div>
-          <p className="text-sm font-normal font-poppins text-[#4B5563]">$199.99</p>
+         <p className="text-sm font-normal font-poppins text-[#4B5563]">(98)</p>
         </div>
       </div>
     </>
