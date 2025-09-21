@@ -5,12 +5,9 @@ import { FaStar } from "react-icons/fa6";
 const RecCArt = () => {
   return (
     <>
-      <CommonHead
-        common1={"Recommendations."}
-        common2={"Best matching products for you"}
-      />
+    
 
-      <div className="recommenmded-content w-[344px] h-[448px] mt-10">
+      <div className="recommenmded-content w-[344px] h-[448px]">
         <div className="img-part w-full h-[347px] bg-gray-300 rounded-[16px] mb-5">
           <img src={"/"} alt="img" />
         </div>
