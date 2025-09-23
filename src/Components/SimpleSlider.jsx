@@ -20,10 +20,12 @@ const SimpleSlider = () => {
     <>
       <section id="slider" className="mt-[88px]">
         <div className="container">
-
           {/* --------common head -------- */}
           <div className="common-head mb-10">
-            <CommonHead common1={'Start exploring. '} common2={' Good things are waiting for you'} />
+            <CommonHead
+              common1={"Start exploring. "}
+              common2={" Good things are waiting for you"}
+            />
           </div>
 
           {/* ----------slider---------
