@@ -50,6 +50,10 @@ const SimpleSlider = () => {
                         to={"/"}
                       >
                         Shop Now
+
+
+
+                        
                       </Link>
                       <FaLongArrowAltRight className="text-base text-[#4B5563]" />
                     </div>
