@@ -11,19 +11,17 @@ const RecCArt = ({ img, title, price, catagory, discount, rating, stock }) => {
       <div className="recommenmded-content w-[344px] h-[448px]">
         <div className="img-part w-full h-[347px] bg-gray-300 rounded-[16px] relative group overflow-hidden duration-1000 mb-5">
           <div>
+            <button className=" w-10 h-10 bg-white text-xl absolute top-7 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700">
+              <Link to={"/"}>
+                <FaCartPlus />
+              </Link>
+            </button>
 
-          <button className=" w-10 h-10 bg-white text-xl absolute top-7 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700">
-            <Link to={'/'}>
-            <FaCartPlus />
-            </Link>
-          </button>
-
-          <button className=" w-10 h-10 bg-white text-xl absolute top-20 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700'>">
-            <Link to={'/'}>
-            <RiMenuSearchFill  />
-            </Link>
-          </button>
-
+            <button className=" w-10 h-10 bg-white text-xl absolute top-20 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700'>">
+              <Link to={"/"}>
+                <RiMenuSearchFill />
+              </Link>
+            </button>
           </div>
 
           <img src={img} alt="img" />
