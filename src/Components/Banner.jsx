@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import banner from "../assets/Images/Banner.png";
 import { Link } from "react-router";
+import ResBanner from "./ResBanner";
 const Banner = () => {
   const settings = {
     dots: true,
@@ -43,7 +44,9 @@ const Banner = () => {
         </div>
       </section>
 
-
+      <div>
+        <ResBanner />
+      </div>
 
       
     </>

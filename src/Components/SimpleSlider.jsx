@@ -30,7 +30,7 @@ const SimpleSlider = () => {
 
           {/* ----------slider---------
            */}
-          <div className="slider-container">
+          <div className="slider-container exploring">
             <Slider {...settings}>
               <div>
                 <div className="w-[418px] h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">

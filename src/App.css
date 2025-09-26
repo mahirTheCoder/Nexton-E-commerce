@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-.slick-dots {
+.exploring {
+  position: relative;
+}
+.exploring .slick-dots {
   display: flex !important;
   justify-content: center;   
   align-items: center;
@@ -14,12 +16,12 @@
   list-style: none;
 }
 
-.slick-dots li {
+.exploring .slick-dots li {
   padding: 0;
   margin: 0;
 }
 
-.slick-dots li button {
+.exploring .slick-dots li button {
   width: 8px;
   height: 8px;
   background: gray;
@@ -31,7 +33,7 @@
 
 }
 
-.slick-dots li:hover button {
+.exploring .slick-dots li:hover button {
   background: #111827; 
 }
 
@@ -65,5 +67,37 @@
 }
 
 #Banner .slick-dots li:hover button {
+  background: #111827; 
+}
+
+/* ---------------explore --------- */
+.expolore {
+  position: relative;
+}
+
+.expolore .slick-dots {
+  display: flex !important;
+  gap: 10px;                 
+  position: absolute;
+  bottom: 32px; 
+  left: 24px;
+
+}
+
+
+
+.expolore .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  font-size: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s linear;
+  border: none;
+
+}
+
+.expolore .slick-dots li:hover button {
   background: #111827; 
 }
