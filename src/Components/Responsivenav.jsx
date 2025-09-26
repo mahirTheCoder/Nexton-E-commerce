@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import favicon from "../assets/Images/favicon.png";
 import { Link } from "react-router";
 import { CiSearch } from "react-icons/ci";
@@ -6,6 +6,8 @@ import { IoMdMenu } from "react-icons/io";
 import { RiUser3Line } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 const Responsivenav = () => {
+  const [showCart, setShowCArt] = useState(false);
+
   return (
     <>
       <nav className="lg:hidden block">
@@ -26,20 +28,22 @@ const Responsivenav = () => {
                 className="text-sm font-normal font-poppins text-primery border-none outline-none"
               />
             </div>
-            <div className="buttons text-2xl text-primery">
+            {/* -------------menu button---------- */}
+            <div onClick={()=>setShowCArt(!showCart) } className="buttons text-2xl text-primery duration-700">
               <IoMdMenu />
             </div>
           </div>
         </div>
-
-        <div className="cart-button w-full bg-white py-4 px-4 flex justify-center  items-center gap-2">
-          <button>
-            <RiUser3Line className="text-2xl text-primery"/>
+        {showCart && (
+          <div className="cart-button w-full bg-white py-4 px-4 flex justify-center  items-center gap-2">
+            <button>
+              <RiUser3Line className="text-2xl text-primery" />
             </button>
-          <button>
-            <IoCartOutline className="text-2xl text-primery"/>
+            <button>
+              <IoCartOutline className="text-2xl text-primery" />
             </button>
-        </div>
+          </div>
+        )}
       </nav>
     </>
   );
