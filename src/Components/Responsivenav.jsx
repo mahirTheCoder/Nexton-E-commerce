@@ -5,14 +5,16 @@ import { CiSearch } from "react-icons/ci";
 import { IoMdMenu } from "react-icons/io";
 import { RiUser3Line } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
+import Cart from "./Cart";
 const Responsivenav = () => {
+  const [showCartt, setShowCArtt] = useState(false);
   const [showCart, setShowCArt] = useState(false);
 
   return (
     <>
       <nav className="lg:hidden block">
         <div className="container px-4">
-          <div className="res-row flex justify-between items-center py-5">
+          <div className="res-row flex justify-between items-center pt-5">
             <div className="logo">
               <Link className="w-6" to={"/"}>
                 <img src={favicon} alt="logo" />
@@ -34,24 +36,25 @@ const Responsivenav = () => {
 
             {/* -------------menu button---------- */}
 
-            <div onClick={()=>setShowCArt(!showCart) } className="buttons text-2xl text-primery duration-1000">
+            <div onClick={()=>setShowCArtt(!showCartt) } className="buttons text-2xl text-primery duration-1000">
               <IoMdMenu />
             </div>
           </div>
         </div>
 
 
-        {showCart && (
+        {showCartt && (
           <div className="cart-button w-full bg-white py-4 px-4 flex justify-center  items-center gap-2">
             <button>
               <RiUser3Line className="text-xl text-primery" />
             </button>
-            <button>
+            <button onClick={()=>setShowCArt(true)} >
               <IoCartOutline className="text-xl text-primery" />
             </button>
           </div>
         )}
 
+        <Cart isOpen={showCart} closeCart={() => setShowCArt(false)} />
 
         
       </nav>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import explore from '../assets/Images/hero-button.png'
 import Slider from "react-slick";
+
 const ResBanner = () => {
   const settings = {
     dots: true,
@@ -14,7 +15,7 @@ const ResBanner = () => {
 
   return (
     <>
-      <nav className="lg:hidden block w-full expolore">
+      <nav className="lg:hidden block w-full expolore pt-5">
          <div className="slider-container">
       <Slider {...settings}>
         <div className="content pt-[163px] pb-[199px] bg-[#F8FAFC] px-6">

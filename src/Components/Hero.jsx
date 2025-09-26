@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
 
             {/* ----------- delivery--------- */}
-            <div className="return flex items-center gap-3 mb-10">
+            <div className="return flex items-center gap-3 mb-10 lg:mb-0">
               <div className="border-l-[3px] h-12.5 border-[#E5E7EB]"></div>
               <div className="shipping flex gap-5 items-center">
                 <div className="img w-6 h-6">
