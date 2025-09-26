@@ -9,26 +9,26 @@ const Hero = () => {
     <>
       <section id="Hero">
         <div className="container">
-          <div className="heroRow  w-full h-[98px] bg-[#FFF] rounded-[16px] border border-[#E5E7EB] flex justify-between items-center px-10 mt-13">
+          <div className="heroRow  w-full lg:h-[98px] bg-[#FFF] rounded-[16px] border border-[#E5E7EB] flex justify-between flex-wrap items-center px-10 mt-13 py-10 lg:py-0">
 
             
             {/* -------shipping------ */}
-            <div className="shipping flex gap-5 items-center">
+            <div className="shipping flex gap-5 items-center mb-10 lg:mb-0">
               <div className="img w-6 h-6">
                 <img src={hero1} alt="hero1" />
               </div>
-              <div className="content">
+              <div className="content ">
                 <h2 className="text-xl text-primery font-medium font-poppins">
                   Free shipping
                 </h2>
-                <p className="text-sm text-[#4B5563] font-medium font-poppins">
+                <p className="text-sm text-[#4B5563] font-medium font-poppins  ">
                   On orders over $50.00
                 </p>
               </div>
             </div>
 
             {/* -----------return--------- */}
-            <div className="return flex gap-3">
+            <div className="return flex items-center  gap-3 mb-10 lg:mb-0">
               <div className="border-l-[3px] h-12.5 border-[#E5E7EB]"></div>
               <div className="shipping flex gap-5 items-center">
                 <div className="img w-6 h-6">
@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
 
             {/* ----------- delivery--------- */}
-            <div className="return flex gap-3">
+            <div className="return flex items-center gap-3 mb-10">
               <div className="border-l-[3px] h-12.5 border-[#E5E7EB]"></div>
               <div className="shipping flex gap-5 items-center">
                 <div className="img w-6 h-6">
