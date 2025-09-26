@@ -16,7 +16,7 @@ const Banner = () => {
 
   return (
     <>
-      <section id="Banner" className="Banner w-full">
+      <section id="Banner" className="Banner w-full hidden lg:block">
         <div className="slider-container w-full">
           <Slider {...settings}>
             <div>
@@ -42,6 +42,10 @@ const Banner = () => {
           </Slider>
         </div>
       </section>
+
+
+
+      
     </>
   );
 };

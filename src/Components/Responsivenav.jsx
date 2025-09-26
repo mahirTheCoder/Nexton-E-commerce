@@ -29,7 +29,7 @@ const Responsivenav = () => {
               />
             </div>
             {/* -------------menu button---------- */}
-            <div onClick={()=>setShowCArt(!showCart) } className="buttons text-2xl text-primery duration-700">
+            <div onClick={()=>setShowCArt(!showCart) } className="buttons text-2xl text-primery duration-1000">
               <IoMdMenu />
             </div>
           </div>
@@ -37,10 +37,10 @@ const Responsivenav = () => {
         {showCart && (
           <div className="cart-button w-full bg-white py-4 px-4 flex justify-center  items-center gap-2">
             <button>
-              <RiUser3Line className="text-2xl text-primery" />
+              <RiUser3Line className="text-xl text-primery" />
             </button>
             <button>
-              <IoCartOutline className="text-2xl text-primery" />
+              <IoCartOutline className="text-xl text-primery" />
             </button>
           </div>
         )}
