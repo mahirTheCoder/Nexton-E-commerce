@@ -18,6 +18,8 @@ const Responsivenav = () => {
                 <img src={favicon} alt="logo" />
               </Link>
             </div>
+
+
             <div className="search-buton rounded-[9999px]  bg-[#F8F8F8] flex gap-2 items-center  w-[200px] h-[36px] ">
               <button className="pl-4">
                 <CiSearch className="text-sm text-primery" />
@@ -28,12 +30,17 @@ const Responsivenav = () => {
                 className="text-sm font-normal font-poppins text-primery border-none outline-none"
               />
             </div>
+
+
             {/* -------------menu button---------- */}
+
             <div onClick={()=>setShowCArt(!showCart) } className="buttons text-2xl text-primery duration-1000">
               <IoMdMenu />
             </div>
           </div>
         </div>
+
+
         {showCart && (
           <div className="cart-button w-full bg-white py-4 px-4 flex justify-center  items-center gap-2">
             <button>
@@ -44,6 +51,9 @@ const Responsivenav = () => {
             </button>
           </div>
         )}
+
+
+        
       </nav>
     </>
   );
