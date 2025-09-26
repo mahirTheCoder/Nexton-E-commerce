@@ -15,7 +15,7 @@ const Footer = () => {
       <section id="footer" className="mt-25">
         <div className="container">
           <div
-            className="footer-menu-row mt-[60px] flex justify-between mb-15
+            className="footer-menu-row mt-[60px] flex justify-between flex-wrap mb-15 px-4
   "
           >
             <div className="logo-part">
@@ -54,7 +54,7 @@ const Footer = () => {
 
             {/* -------------Getting started---------- */}
 
-            <div className="Getting-started flex flex-col">
+            <div className="Getting-started flex  flex-col">
               <h2 className="text-xl font-medium font-poppins text-primery mb-5">
                 Getting started
               </h2>
@@ -153,9 +153,9 @@ const Footer = () => {
             
           </div>
           <div className="under-Line mb-[2px] h-[2px] bg-[#E7E7E7] "></div>
-          <div className="payment-methood py-9 flex items-center justify-between">
+          <div className="payment-methood py-9 flex items-center flex-wrap  justify-between px-10 lg:px-0">
             <div className="text-part">
-              <p className="text-base text-primery font-normal font-poppins ">
+              <p className="text-base text-primery font-normal font-poppins mb-5 lg:mb-0">
                 Nexton eCommerce. © 2024
               </p>
             </div>
