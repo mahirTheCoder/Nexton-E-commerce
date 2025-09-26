@@ -2,13 +2,14 @@ import React from "react";
 import favicon from "../assets/Images/favicon.png";
 import { Link } from "react-router";
 import { CiSearch } from "react-icons/ci";
+import { IoMdMenu } from "react-icons/io";
 
 const Responsivenav = () => {
   return (
     <>
       <nav className="lg:hidden block">
-        <div className="container px-6">
-          <div className="res-row mb-10 flex justify-between items-center py-5">
+        <div className="container px-4">
+          <div className="res-row flex justify-between items-center py-5">
             <div className="logo">
               <Link className="w-6" to={"/"}>
                 <img src={favicon} alt="logo" />
@@ -20,7 +21,10 @@ const Responsivenav = () => {
               </button>
               <input type="text" placeholder="Search in products..."  className="text-sm font-normal font-poppins text-primery border-none outline-none"/>
             </div>
-            <div className="buttons"></div>
+            <div className="buttons text-2xl text-primery">
+              <IoMdMenu />
+
+            </div>
           </div>
         </div>
       </nav>
