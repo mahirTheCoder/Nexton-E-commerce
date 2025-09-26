@@ -6,7 +6,7 @@ const Cart = ({ isOpen, closeCart }) => {
     <>
       <section
         id="Cart"
-        className={` fixed h-screen absolute top-0  right-0 ${
+        className={`  h-screen absolute top-0  right-0 ${
           isOpen ? "w-full" : "w-0"
         } duration-1000 overflow-hidden z-20 `}
       >

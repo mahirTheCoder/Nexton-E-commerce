@@ -5,17 +5,17 @@ import fashionImg from '../assets/Images/fashionimg.png'
 const Fashion = () => {
   return (
     <>
-<section id="fashion">
-        <div className="container w-full h-[437px] bg-[#F5F5F5] rounded-[24px] mt-30 mb-13">
-          <div className="fasion-menu-row flex justify-between flex-wrap ">
+<section id="fashion ">
+        <div className="container w-full lg:h-[437px] bg-[#F5F5F5] rounded-[24px] mt-30 mb-13 ">
+          <div className="fasion-menu-row flex justify-between flex-wrap px-6 lg:px-0">
 
 
             {/* -----------test part-------- */}
-            <div className="content pt-[94px] pl-30">
+            <div className="content pt-[94px] lg:pl-30">
               <p className="text-sm text-[#4B5563] font-poppins font-normal mb-3.5 ">
                 100% Original Products
               </p>
-              <h2 className="w-[362px] text-3xl text-primery font-semibold font-poppins mb-6">
+              <h2 className="lg:w-[362px] lg:text-3xl  text-primery font-semibold font-poppins mb-6">
                 The All New Fashion Collection Items
               </h2>
               <p  className="text-sm text-[#4B5563] font-poppins font-normal mb-6 ">Starting from: $59.99</p>
@@ -24,7 +24,7 @@ const Fashion = () => {
 
 
             {/* -----------img part------- */}
-            <div className="fashionImg pr-24">
+            <div className="fashionImg lg:pr-24 pt-10 lg:pt-0 pb-6 lg:pb-0">
               <img src={fashionImg} alt="fasion img" />
             </div>
           </div>
