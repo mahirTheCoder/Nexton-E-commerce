@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <>
-      <section id="Navbar">
+      <section id="Navbar ">
         <div className="container">
-          <nav>
+          <nav className="hidden lg:block">
             <div className="nav-row flex justify-between py-7">
               {/* -------------logo part---------- */}
               <div className="logo">
