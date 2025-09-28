@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RecCArt from "./RecCArt";
 import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
+import Slider from "react-slick";
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
@@ -25,11 +26,23 @@ const Recommended = () => {
               common2={"Best matching products for you"}
             />
           </div>
-
-          <div className="recommended-items flex flex-wrap gap-30">
-            {allproducts.map((item) => (
-              <RecCArt key={item.id}  img={item.thumbnail} title={item.title} price={item.price} catagory={item.category} discount={item.discountPercentage} rating={item.rating} stock={item.stock}/>
-            ))}
+          <div className="slider-container">
+            <div>
+              <div className="recommended-items flex flex-wrap gap-10">
+                {allproducts.slice(0, 4).map((item) => (
+                  <RecCArt
+                    key={item.id}
+                    img={item.thumbnail}
+                    title={item.title}
+                    price={item.price}
+                    catagory={item.category}
+                    discount={item.discountPercentage}
+                    rating={item.rating}
+                    stock={item.stock}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
