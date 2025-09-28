@@ -4,6 +4,7 @@ import SimpleSlider from '../Components/SimpleSlider'
 import Fashion from '../Components/Fashion'
 import Banner from '../Components/Banner'
 import Recommended from '../Components/Recommended'
+import FashionPart from '../Components/FashionPart'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero/>
       <SimpleSlider/>
       <Recommended/>
+      <FashionPart/>
       <Fashion/>
     </div>
   )
