@@ -1,5 +1,4 @@
 import React from "react";
-import CommonHead from "./CommonHead";
 import { FaStar } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa";
 import { RiMenuSearchFill } from "react-icons/ri";

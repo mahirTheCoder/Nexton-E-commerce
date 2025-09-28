@@ -1,9 +1,10 @@
 import React from 'react'
-import { FaCartPlus, FaStar } from 'react-icons/fa6'
-import { RiMenuSearchFill } from 'react-icons/ri'
-import { Link } from 'react-router'
+import { FaStar } from "react-icons/fa6";
+import { FaCartPlus } from "react-icons/fa";
+import { RiMenuSearchFill } from "react-icons/ri";
+import { Link } from "react-router";
 
-const FashinCart = () => {
+const FashinCart = ({ img, title, price, catagory, discount, rating, stock }) => {
   return (
     <>
     
