@@ -104,22 +104,27 @@
 
 /* ---------------fashionSlider --------- */
 
-/* .expolore {
+.fashionSlider {
   position: relative;
 }
 
-.expolore .slick-dots {
-  display: flex !important;
+.fashionSlider .slick-dots {
+ display: flex !important;
+  justify-content: center;   
+  align-items: center;
   gap: 10px;                 
   position: absolute;
-  bottom: 32px; 
-  left: 24px;
+  bottom: -40px;         
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
 }
 
 
 
-.expolore .slick-dots li button {
+.fashionSlider .slick-dots li button {
   width: 8px;
   height: 8px;
   background: gray;
@@ -131,6 +136,6 @@
 
 }
 
-.expolore .slick-dots li:hover button {
+.fashionSlider .slick-dots li:hover button {
   background: #111827; 
-} */
+}

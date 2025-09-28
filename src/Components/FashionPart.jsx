@@ -24,6 +24,21 @@ const FashionPart = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // 1024px এর নিচে
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640, // 640px এর নিচে
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -36,9 +51,9 @@ const FashionPart = () => {
               common2={"Best selling of the month"}
             />
           </div>
-          <div className="slider-container fashionSlider">
+          <div className="slider-container fashionSlider ">
             <Slider {...settings}>
-              {showAll.map((item) => (
+              {showAll.slice(0, 15).map((item) => (
                 <div key={item.id}>
                   <FashinCart
                     img={item.thumbnail}

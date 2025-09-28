@@ -14,11 +14,24 @@ const SimpleSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // 1024px এর নিচে
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 575, // 640px এর নিচে
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
-
   return (
     <>
-      <section id="slider" className="mt-[88px]">
+      <section id="slider" className="mt-[88px]  px-2 lg:mr-0">
         <div className="container">
           {/* --------common head -------- */}
           <div className="common-head mb-10">
@@ -32,17 +45,17 @@ const SimpleSlider = () => {
            */}
           <div className="slider-container exploring">
             <Slider {...settings}>
-              <div>
-                <div className="w-[418px] h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+              <div className="">
+                <div className="lg:w-[418px] w-full h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between lg:px-10 px-5 ">
                   <div className="part1">
-                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                    <h2 className="lg:text-2xl text-lg font-medium text-primery font-poppins">
                       For Men's
                     </h2>
-                    <p className="text-sm text-[#4B5563] font-normal font-poppins">
+                    <p className="lg:text-sm text-xs text-[#4B5563] font-normal font-poppins">
                       Starting at $24
                     </p>
                   </div>
-                  <div className="par2 flex gap-5">
+                  <div className="par2 flex gap-2">
                     <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
                     <div className="flex gap-2 items-center">
                       <Link
@@ -50,10 +63,6 @@ const SimpleSlider = () => {
                         to={"/"}
                       >
                         Shop Now
-
-
-
-                        
                       </Link>
                       <FaLongArrowAltRight className="text-base text-[#4B5563]" />
                     </div>
@@ -62,12 +71,12 @@ const SimpleSlider = () => {
               </div>
 
               <div>
-                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                <div className="lg:w-[418px] w-full h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between lg:px-10 px-5 ">
                   <div className="part1">
-                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                    <h2 className="lg:text-2xl text-lg  font-medium text-primery font-poppins">
                       For Women's
                     </h2>
-                    <p className="text-sm text-[#4B5563] font-normal font-poppins">
+                    <p className="lg:text-sm text-xs text-[#4B5563] font-normal font-poppins">
                       Starting at $19
                     </p>
                   </div>
@@ -87,12 +96,12 @@ const SimpleSlider = () => {
               </div>
 
               <div>
-                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                <div className="lg:w-[418px] w-full h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between lg:px-10 px-5 ">
                   <div className="part1">
-                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                    <h2 className="lg:text-2xl text-lg font-medium text-primery font-poppins">
                       Accessories
                     </h2>
-                    <p className="text-sm text-[#4B5563] font-normal font-poppins">
+                    <p className="lg:text-sm text-xs text-[#4B5563] font-normal font-poppins">
                       Explore accessories
                     </p>
                   </div>
@@ -100,24 +109,24 @@ const SimpleSlider = () => {
                     <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
                     <div className="flex gap-2 items-center">
                       <Link
-                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        className="lg:text-sm text-sm  text-[#4B5563] font-normal font-poppins"
                         to={"/"}
                       >
                         Shop Now
                       </Link>
-                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                      <FaLongArrowAltRight className="lg:text-sm text-sm text-[#4B5563]" />
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                <div className="lg:w-[418px] w-full h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between lg:px-10 px-5 ">
                   <div className="part1">
-                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                    <h2 className="lg:text-2xl text-lg  font-medium text-primery font-poppins">
                       For Men's
                     </h2>
-                    <p className="text-sm text-[#4B5563] font-normal font-poppins">
+                    <p className="lg:text-sm text-xs text-[#4B5563] font-normal font-poppins">
                       Starting at $24
                     </p>
                   </div>
@@ -125,24 +134,24 @@ const SimpleSlider = () => {
                     <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
                     <div className="flex gap-2 items-center">
                       <Link
-                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        className="lg:text-sm text-sm text-[#4B5563] font-normal font-poppins"
                         to={"/"}
                       >
                         Shop Now
                       </Link>
-                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                      <FaLongArrowAltRight className="lg:text-sm text-smtext-[#4B5563]" />
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <div className="w-[418px] h-[132px] border border-[#E5E7EB] rounded-[16px] flex items-center justify-between px-10 ">
+                <div className="lg:w-[418px] w-full h-[132px] border  border-[#E5E7EB] rounded-[16px] flex items-center justify-between lg:px-10 px-5 ">
                   <div className="part1">
-                    <h2 className="text-2xl font-medium text-primery font-poppins">
+                    <h2 className="lg:text-2xl text-lg font-medium text-primery font-poppins">
                       For Women's
                     </h2>
-                    <p className="text-sm text-[#4B5563] font-normal font-poppins">
+                    <p className="lg:text-sm text-xs text-[#4B5563] font-normal font-poppins">
                       Starting at $19
                     </p>
                   </div>
@@ -150,12 +159,12 @@ const SimpleSlider = () => {
                     <div className="border-l-[3px] h-8 border-[#E5E7EB]"></div>
                     <div className="flex gap-2 items-center">
                       <Link
-                        className="text-sm  text-[#4B5563] font-normal font-poppins"
+                        className="lg:text-sm text-sm  text-[#4B5563] font-normal font-poppins"
                         to={"/"}
                       >
                         Shop Now
                       </Link>
-                      <FaLongArrowAltRight className="text-base text-[#4B5563]" />
+                      <FaLongArrowAltRight className="lg:text-sm text-sm text-[#4B5563]" />
                     </div>
                   </div>
                 </div>

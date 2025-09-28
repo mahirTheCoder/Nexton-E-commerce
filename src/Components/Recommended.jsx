@@ -18,7 +18,7 @@ const Recommended = () => {
 
   return (
     <>
-      <section id="Recommended" className="Recommended mt-44">
+      <section id="Recommended" className="Recommended  mt-44">
         <div className="container">
           <div className="header mb-10">
             <CommonHead

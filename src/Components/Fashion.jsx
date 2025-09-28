@@ -5,7 +5,7 @@ import fashionImg from '../assets/Images/fashionimg.png'
 const Fashion = () => {
   return (
     <>
-<section id="fashion ">
+<section id="fashion px- ">
         <div className="container w-full lg:h-[437px] bg-[#F5F5F5] rounded-[24px] mt-30 mb-13 ">
           <div className="fasion-menu-row flex justify-between flex-wrap px-6 lg:px-0">
 
