@@ -101,3 +101,36 @@
 .expolore .slick-dots li:hover button {
   background: #111827; 
 }
+
+/* ---------------fashionSlider --------- */
+
+/* .expolore {
+  position: relative;
+}
+
+.expolore .slick-dots {
+  display: flex !important;
+  gap: 10px;                 
+  position: absolute;
+  bottom: 32px; 
+  left: 24px;
+
+}
+
+
+
+.expolore .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  font-size: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s linear;
+  border: none;
+
+}
+
+.expolore .slick-dots li:hover button {
+  background: #111827; 
+} */

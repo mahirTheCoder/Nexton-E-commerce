@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CommonHead from "./CommonHead";
 import FashinCart from "./FashinCart";
 import axios from "axios";
+import Slider from "react-slick";
 
 const FashionPart = () => {
   const [showAll, setShowAll] = useState([]);
@@ -16,6 +17,15 @@ const FashionPart = () => {
   useEffect(() => {
     console.log(showAll);
   }, [showAll]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
+
   return (
     <>
       <section id="fashion" className="mt-[176px]">
@@ -26,19 +36,22 @@ const FashionPart = () => {
               common2={"Best selling of the month"}
             />
           </div>
-          <div className="api-part flex flex-wrap gap-10">
-            {showAll.map((item) => (
-              <FashinCart
-                key={item.id}
-                img={item.thumbnail}
-                title={item.title}
-                price={item.price}
-                catagory={item.category}
-                discount={item.discountPercentage}
-                rating={item.rating}
-                stock={item.stock}
-              />
-            ))}
+          <div className="slider-container fashionSlider">
+            <Slider {...settings}>
+              {showAll.map((item) => (
+                <div key={item.id}>
+                  <FashinCart
+                    img={item.thumbnail}
+                    title={item.title}
+                    price={item.price}
+                    catagory={item.category}
+                    discount={item.discountPercentage}
+                    rating={item.rating}
+                    stock={item.stock}
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </section>
