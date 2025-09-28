@@ -26,7 +26,20 @@ const FashionPart = () => {
               common2={"Best selling of the month"}
             />
           </div>
-     
+          <div className="api-part flex flex-wrap gap-10">
+            {showAll.map((item) => (
+              <FashinCart
+                key={item.id}
+                img={item.thumbnail}
+                title={item.title}
+                price={item.price}
+                catagory={item.category}
+                discount={item.discountPercentage}
+                rating={item.rating}
+                stock={item.stock}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </>
