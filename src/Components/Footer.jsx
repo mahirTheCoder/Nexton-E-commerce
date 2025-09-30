@@ -59,25 +59,25 @@ const Footer = () => {
                 Getting started
               </h2>
               <a
-                className="text-base font-normal  font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal  font-poppins text-primery mb-4"
                 href="#"
               >
                 Release Notes
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Upgrade Guide
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Browser Support
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Dark Mode
