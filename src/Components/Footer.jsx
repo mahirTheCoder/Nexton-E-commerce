@@ -55,7 +55,7 @@ const Footer = () => {
             {/* -------------Getting started---------- */}
 
             <div className="Getting-started flex  flex-col">
-              <h2 className="text-xl font-medium font-poppins text-primery mb-5">
+              <h2 className="lg:text-xl text-lg font-medium font-poppins text-primery mb-5">
                 Getting started
               </h2>
               <a
@@ -87,29 +87,29 @@ const Footer = () => {
             {/* -------------Explore ---------- */}
 
             <div className="Getting-started flex flex-col">
-              <h2 className="text-xl font-medium font-poppins text-primery mb-5">
+              <h2 className="lg:text-xl text-lg font-medium font-poppins text-primery mb-5">
                 Explore
               </h2>
               <a
-                className="text-base font-normal  font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal  font-poppins text-primery mb-4"
                 href="#"
               >
                 Prototyping
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Design systems
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Pricing
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Security
