@@ -119,29 +119,29 @@ const Footer = () => {
             {/* -------------Community ---------- */}
 
             <div className="Getting-started flex flex-col">
-              <h2 className="text-xl font-medium font-poppins text-primery mb-5">
+              <h2 className="lg:text-xl text:lg font-medium font-poppins text-primery mb-5">
                 Community
               </h2>
               <a
-                className="text-base font-normal  font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal  font-poppins text-primery mb-4"
                 href="#"
               >
                 Discussion Forums
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Code of Conduct
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 Contributing
               </a>
               <a
-                className="text-base font-normal font-poppins text-primery mb-4"
+                className="lg:text-base text-sm font-normal font-poppins text-primery mb-4"
                 href="#"
               >
                 API Reference
