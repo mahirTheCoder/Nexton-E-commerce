@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BsStars } from "react-icons/bs";
+import { Link } from "react-router";
 
 const CheakComponets = () => {
   const [img, setImg] = useState(
@@ -108,7 +110,7 @@ const CheakComponets = () => {
             </p>
 
             {/* ---------febric part-------- */}
-            
+
             <h2 className="lg:text-[24px] text-lg font-semibold font-poppins text-primery mb-1 ">
               Fabric + Care
             </h2>
@@ -133,6 +135,22 @@ const CheakComponets = () => {
             <p className=" lg:w-[735px] text-4  font-normal font-poppins w-full text-[#4B5563]  ">
               Review Average: -
             </p>
+
+            {/* ------------Keywords----------- */}
+            <div className="Keyword-part">
+              <h2 className="lg:text-[24px] text-lg font-semibold font-poppins text-primery mt-15 mb-1 ">
+                Keywords
+              </h2>
+              <div className="all-fashion">
+                <Link
+                  to={"/"}
+                  className="flex justify-center items-center border border-[#E5E7EB] w-[127px] h-[32px] bg-[#FFF] rounded-[16px] text-xs font-poppins font-normal text-[#4B5563] gap-1 "
+                >
+                  <BsStars />
+                  men's fashion
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
