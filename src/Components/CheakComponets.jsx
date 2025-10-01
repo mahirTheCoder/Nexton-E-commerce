@@ -9,17 +9,25 @@ const [img,setImg]= useState ('https://encrypted-tbn0.gstatic.com/images?q=tbn:A
       <section id="cheakout " className="mt-10">
         <div className="container">
           <div className="img-and-content flex gap-10">
-              <div className="imgpart lg:w-[804px] h-[690px] bg-amber-300 ">
+              <div className="imgpart lg:w-[804px] h-[690px]  ">
                 <div className="button-img flex justify-between">
                   <div className="button flex flex-col">
-                    <button className="w-[140px] h-[158px] bg-amber-800 mb-4 overflow-hidden rounded-[16px]"></button>
-                    <button onClick={()=> {setImg('')}} className="w-[140px] h-[158px] bg-amber-800 mb-4 overflow-hidden rounded-[16px]">
-                      
+                   
+                    <button onClick={()=> {setImg('https://cdn.pixabay.com/photo/2016/03/09/09/43/cat-1245963_640.jpg')}} className="w-[140px] h-[158px]  mb-4 overflow-hidden rounded-[16px]">
+                      <img className="w-full h-full" src={'https://cdn.pixabay.com/photo/2016/03/09/09/43/cat-1245963_640.jpg'} alt="img" />
                     </button>
-                    <button className="w-[140px] h-[158px] bg-amber-800 mb-4 overflow-hidden rounded-[16px]"></button>
-                    <button className="w-[140px] h-[158px] bg-amber-800  overflow-hidden rounded-[16px]"></button>
+                    <button onClick={()=> {setImg('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeJzgV54PKtzJDLmBUBUmcSic4hoeGXsMuOA&s')}} className="w-[140px] h-[158px]  mb-4 overflow-hidden rounded-[16px]">
+                      <img className="w-full h-full" src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeJzgV54PKtzJDLmBUBUmcSic4hoeGXsMuOA&s'} alt="img" />
+                    </button>
+                    <button onClick={()=> {setImg('https://cdn.pixabay.com/photo/2025/08/02/02/01/cat-9749782_640.jpg')}} className="w-[140px] h-[158px]  mb-4 overflow-hidden rounded-[16px]">
+                      <img className="w-full h-full" src={'https://cdn.pixabay.com/photo/2025/08/02/02/01/cat-9749782_640.jpg'} alt="img" />
+                    </button>
+                    <button onClick={()=> {setImg('https://cdn.pixabay.com/photo/2018/04/20/17/18/cat-3336579_640.jpg')}} className="w-[140px] h-[158px]  mb-4 overflow-hidden rounded-[16px]">
+                      <img className="w-full h-full" src={'https://cdn.pixabay.com/photo/2018/04/20/17/18/cat-3336579_640.jpg'} alt="img" />
+                    </button>
+                   
                   </div>
-                  <div className="img w-[640px] h-[678px] bg-amber-950 overflow-hidden rounded-[16px] mt-1.5 ">
+                  <div className="img w-[640px] h-[690px]  overflow-hidden rounded-[16px]  ">
                     <img className="w-full h-full object-cover" src={img} alt="img" /> 
                   </div>
                 </div>
