@@ -14,7 +14,7 @@ const CheakComponets = () => {
                     <button className="w-[140px] h-[158px] bg-amber-800 mb-4 overflow-hidden rounded-[16px]"></button>
                     <button className="w-[140px] h-[158px] bg-amber-800  overflow-hidden rounded-[16px]"></button>
                   </div>
-                  <div className="img"></div>
+                  <div className="img w-[640px] h-[678px] bg-amber-950 overflow-hidden rounded-[16px] mt-1.5 "></div>
                 </div>
               </div>
               <div className="addt-to-cart w-[460px] h-[463px] bg-amber-200 "></div>
