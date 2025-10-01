@@ -149,6 +149,13 @@ const CheakComponets = () => {
                   <BsStars />
                   men's fashion
                 </Link>
+                <Link
+                  to={"/"}
+                  className="flex justify-center items-center border border-[#E5E7EB] w-[104px] h-[32px] bg-[#FFF] rounded-[16px] text-xs font-poppins font-normal text-[#4B5563] gap-1 "
+                >
+                  <BsStars />
+                 winter hat
+                </Link>
               </div>
             </div>
           </div>
