@@ -106,7 +106,15 @@ const CheakComponets = () => {
               from 1900 to 1914. Manufacturing of the classic wooden canoes in
               Valley Park, Missouri ceased in 1978.
             </p>
-         
+            <h2 className="lg:text-[24px] text-lg font-semibold font-poppins text-primery mb-1 ">
+              Fabric + Care
+            </h2>
+            <p className=" lg:w-[735px] text-4  font-normal font-poppins w-full text-[#4B5563]  ">
+              Material: Soft wool blend
+            </p>
+            <p className=" lg:w-[735px] text-4  font-normal font-poppins w-full text-[#4B5563]  ">
+              Color: Various
+            </p>
           </div>
         </div>
       </section>
