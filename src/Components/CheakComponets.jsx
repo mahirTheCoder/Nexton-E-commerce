@@ -14,15 +14,16 @@ const CheakComponets = () => {
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setAllproducts(res.data.products))
-      .catch((err) => /* RED BORDER: console.log below */ console.log(err));
+      .catch((err) => console.log(err));
   }, []);
 
-  const [img, setImg] = useState(
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZq5cxkSyzBP_L8bkUUH1A_QIJaKeyjZjkPQ&s://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSftJ8OKRqa4P_nZbqMbOvHcW5uaNUXVYRphw&s"
-  );
+
+  // -----------use params---------
+  const myparams = useParams();
 
   // -----------single product api -----------
   const [singleproduct, setSingleproduct] = useState();
+  const [image , setImage] = useState('https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg');
 
   useEffect(() => {
     axios
@@ -31,11 +32,8 @@ const CheakComponets = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(singleproduct);
+  // console.log(singleproduct?.images?.[0]);
 
-  // -----------use params---------
-  const myparams = useParams();
-  console.log(myparams);
 
   return (
     <>
@@ -48,13 +46,13 @@ const CheakComponets = () => {
               <div className="button-img flex justify-between">
                 <div className="button flex flex-col gap-4">
                   {singleproduct?.images?.map((item, i) => (
-                    <button
+                    <button onClick={() => setImage(item)}
                       key={i}
                       className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px]"
                     >
                       <img
                         src={item}
-                        alt='product-img'
+                        alt="product-img"
                         className="w-full h-full"
                       />
                     </button>
@@ -63,7 +61,7 @@ const CheakComponets = () => {
                 <div className="img w-[640px] h-[690px]  overflow-hidden rounded-[16px]  ">
                   <img
                     className="w-full h-full object-cover"
-                    src={img}
+                    src={image}
                     alt="img"
                   />
                 </div>
