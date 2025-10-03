@@ -1,8 +1,26 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { BsStars } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
+import { HiMiniShoppingBag } from "react-icons/hi2";
 import { Link } from "react-router";
+import CommonHead from "./CommonHead";
+import RecCArt from "./RecCArt";
 
 const CheakComponets = () => {
+
+  const [allproducts, setAllproducts] = useState ([]);
+
+  useEffect (() => {
+    axios
+      .get("https://dummyjson.com/products")
+      .then((res) => setAllproducts(res.data.products))
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(allproducts);
+
+
   const [img, setImg] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZq5cxkSyzBP_L8bkUUH1A_QIJaKeyjZjkPQ&s://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSftJ8OKRqa4P_nZbqMbOvHcW5uaNUXVYRphw&s"
   );
@@ -94,11 +112,32 @@ const CheakComponets = () => {
 
             {/* --------------cart part------------- */}
 
-            <div className="addt-to-cart w-[460px] h-[463px] bg-amber-200 "></div>
-          </div>
+            <div className="addt-to-cart w-[460px] h-[463px] bg-[#FFF]] rounded-[16px] border border-[#E5E7EB] p-10 ">
+              <div className="review-part  flex justify-between">
+                <div className="star flex gap-1.5">
+                  <div className="text-base font-semibold font-poppins text-[#4B5563] flex gap-1.5">
+                    {" "}
+                    <FaStar className="text-[#FBBF24]" /> 4.9
+                  </div>
+                  <p className="text-base font-semibold font-poppins text-[#4B5563] underline ">
+                    142 reviews
+                  </p>
+                </div>
+                <div className="price">
+                  <h2 className="text-2xl font-semibold font-poppins text-primery">
+                    $169.99
+                  </h2>
+                  <p className="text-sm font-medium font-poppins text-[#4B5563]">
+                    {" "}
+                    <del>$199.99 </del>{" "}
+                  </p>
+                </div>
+              </div>
+
+
 
           {/* ---------------content ba details part----------- */}
-          <div className="details-part mt-26">
+          <div className="details-part mt-26 mb-24">
             <h1 className="lg:text-[36px] text-lg font-semibold font-poppins text-primery mb-4 ">
               Black Automatic Watch
             </h1>
@@ -141,7 +180,7 @@ const CheakComponets = () => {
               <h2 className="lg:text-[24px] text-lg font-semibold font-poppins text-primery mt-15 mb-1 ">
                 Keywords
               </h2>
-              <div className="all-fashion">
+              <div className="all-fashion flex gap-2 flex-wrap ">
                 <Link
                   to={"/"}
                   className="flex justify-center items-center border border-[#E5E7EB] w-[127px] h-[32px] bg-[#FFF] rounded-[16px] text-xs font-poppins font-normal text-[#4B5563] gap-1 "
@@ -154,25 +193,52 @@ const CheakComponets = () => {
                   className="flex justify-center items-center border border-[#E5E7EB] w-[104px] h-[32px] bg-[#FFF] rounded-[16px] text-xs font-poppins font-normal text-[#4B5563] gap-1 "
                 >
                   <BsStars />
-                 winter hat
+                  winter hat
                 </Link>
                 <Link
                   to={"/"}
                   className="flex justify-center items-center border border-[#E5E7EB] w-[153px] h-[32px] bg-[#FFF] rounded-[16px] text-xs font-poppins font-normal text-[#4B5563] gap-1 "
                 >
                   <BsStars />
-                colorful accessory
+                  colorful accessory
                 </Link>
                 <Link
                   to={"/"}
                   className="flex justify-center items-center border border-[#E5E7EB] w-[143px] h-[32px] bg-[#FFF] rounded-[16px] text-xs font-poppins font-normal text-[#4B5563] gap-1 "
                 >
                   <BsStars />
-                warm headwear
+                  warm headwear
                 </Link>
               </div>
             </div>
           </div>
+           
+           {/* -----------------api Recommended products--------- */}
+           <div className="header mb-10">
+            <CommonHead
+              common1={"Recommended products."}
+         
+            />
+          </div>
+          <div className="slider-container">
+            <div>
+              <div className="recommended-items flex flex-wrap gap-10">
+                {allproducts.slice(5, 9).map((item) => (
+                  <RecCArt
+                    key={item.id}
+                    img={item.thumbnail}
+                    title={item.title}
+                    price={item.price}
+                    catagory={item.category}
+                    discount={item.discountPercentage}
+                    rating={item.rating}
+                    stock={item.stock}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </>

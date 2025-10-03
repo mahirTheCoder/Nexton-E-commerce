@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import RecCArt from "./RecCArt";
 import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
-import Slider from "react-slick";
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
@@ -29,7 +28,7 @@ const Recommended = () => {
           <div className="slider-container">
             <div>
               <div className="recommended-items flex flex-wrap gap-10">
-                {allproducts.slice(0, 4).map((item) => (
+                {allproducts.slice(25, 29).map((item) => (
                   <RecCArt
                     key={item.id}
                     img={item.thumbnail}

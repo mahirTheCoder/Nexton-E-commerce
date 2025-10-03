@@ -53,7 +53,7 @@ const FashionPart = () => {
           </div>
           <div className="slider-container fashionSlider ">
             <Slider {...settings}>
-              {showAll.slice(0, 15).map((item) => (
+              {showAll.slice(15, 30).map((item) => (
                 <div key={item.id}>
                   <FashinCart
                     img={item.thumbnail}
