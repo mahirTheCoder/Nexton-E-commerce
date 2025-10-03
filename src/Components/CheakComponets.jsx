@@ -196,7 +196,21 @@ const CheakComponets = () => {
                   </p>
               </div>
 
-   
+              {/* -------------underlime ---------- */}
+              <hr className="text-[#E5E7EB] mb-4" />
+
+              {/* --------------total----------- */}
+               <div className="total flex justify-between ">
+                    <p className="text-base font-semibold font-poppins text-primery">
+                 Total
+                  </p>
+                    <p className="text-base font-semibold font-poppins text-primery">
+                  $169.99
+                  </p>
+              </div>
+
+            </div>
+          </div>
 
           {/* ---------------content ba details part----------- */}
           <div className="details-part mt-26 mb-24">
