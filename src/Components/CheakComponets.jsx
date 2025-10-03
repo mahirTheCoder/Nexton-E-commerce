@@ -178,7 +178,25 @@ const CheakComponets = () => {
                 </Link>
               </div>
 
-        
+              {/* ---------------discount & price--------------  */}
+              <div className="discount-price flex justify-between mt-8 mb-2.5">
+                    <p className="text-base font-medium font-poppins text-primery">
+                   $169.99 x 1
+                  </p>
+                    <p className="text-base font-medium font-poppins text-primery">
+                   $169.99
+                  </p>
+              </div>
+              <div className="discount-price flex justify-between mt-2.5 mb-4">
+                    <p className="text-base font-medium font-poppins text-primery">
+                  Tax estimate
+                  </p>
+                    <p className="text-base font-medium font-poppins text-primery">
+                   $0
+                  </p>
+              </div>
+
+   
 
           {/* ---------------content ba details part----------- */}
           <div className="details-part mt-26 mb-24">
