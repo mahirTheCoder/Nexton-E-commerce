@@ -47,13 +47,18 @@ const CheakComponets = () => {
             <div className="imgpart lg:w-[804px] h-[690px]  ">
               <div className="button-img flex justify-between">
                 <div className="button flex flex-col gap-4">
-
-                  {
-                    singleproduct.images?.map((item)=>(
-                      <button className="w-[140px] h-[158px]  mb-4 overflow-hidden rounded-[16px]"></button>
-
-                    ))
-                  }
+                  {singleproduct?.images?.map((item, i) => (
+                    <button
+                      key={i}
+                      className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px]"
+                    >
+                      <img
+                        src={item}
+                        alt='product-img'
+                        className="w-full h-full"
+                      />
+                    </button>
+                  ))}
                 </div>
                 <div className="img w-[640px] h-[690px]  overflow-hidden rounded-[16px]  ">
                   <img
