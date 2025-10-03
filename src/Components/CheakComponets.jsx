@@ -134,6 +134,28 @@ const CheakComponets = () => {
                 </div>
               </div>
 
+              {/* -----------size part------------ */}
+              <h2 className="text-base font-semibold font-poppins text-[#111827] mb-3 mt-8 ">
+                Size: S
+              </h2>
+
+              <div className="all-sizes  flex justify-between">
+                <button className="w-[72px] h-[44px] border border-[#E5E7EB] text-base font-semibold font-poppins text-primery flex justify-center items-center rounded-[16px] hover:bg-[#0EA5E9] hover:text-white duration-700">
+                  S
+                </button>
+                <button className="w-[72px] h-[44px] border border-[#E5E7EB] text-base font-semibold font-poppins text-primery flex justify-center items-center rounded-[16px] hover:bg-[#0EA5E9] hover:text-white duration-700">
+                  M
+                </button>
+                <button className="w-[72px] h-[44px] border border-[#E5E7EB] text-base font-semibold font-poppins text-primery flex justify-center items-center rounded-[16px] hover:bg-[#0EA5E9] hover:text-white duration-700">
+                  L
+                </button>
+                <button className="w-[72px] h-[44px] border border-[#E5E7EB] text-base font-semibold font-poppins text-primery flex justify-center items-center rounded-[16px] hover:bg-[#0EA5E9] hover:text-white duration-700">
+                  XL
+                </button>
+                <button className="w-[72px] h-[44px] border border-[#E5E7EB] text-base font-semibold font-poppins text-primery flex justify-center items-center rounded-[16px] hover:bg-[#0EA5E9] hover:text-white duration-700">
+                  2XL
+                </button>
+              </div>
 
 
           {/* ---------------content ba details part----------- */}
