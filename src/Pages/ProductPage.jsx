@@ -1,13 +1,13 @@
 import React from 'react'
 import CheakComponets from '../Components/CheakComponets'
+const ProductPage = () => {
 
-const Productdetails = () => {
+  
   return (
     <>
-      <CheakComponets />
-
+    <CheakComponets />
     </>
   )
 }
 
-export default Productdetails
+export default ProductPage

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import RecCArt from "./RecCArt";
 import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
+import { useNavigate } from "react-router-dom";
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -15,8 +17,8 @@ const Recommended = () => {
 
   // -----------handleer -----------
   const DetailsClick = (ProductSet) => {
-    console.log(ProductSet);
-  }
+    navigate(`/ProductPage/${ProductSet}`);
+  };
 
   return (
     <>
@@ -41,7 +43,7 @@ const Recommended = () => {
                     discount={item.discountPercentage}
                     rating={item.rating}
                     stock={item.stock}
-                    DetailsClick={()=> DetailsClick(item.id)}
+                    DetailsClick={() => DetailsClick(item.id)}
                   />
                 ))}
               </div>

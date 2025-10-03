@@ -1,17 +1,17 @@
 import React from 'react'
 import './App.css'
-import { createBrowserRouter, Route, RouterProvider } from 'react-router'
-import { createRoutesFromElements } from 'react-router'
+import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom'
+import { createRoutesFromElements } from 'react-router-dom'
 import LaoutOne from './Layouts/LaoutOne'
 import Home from './Pages/Home'
-import Checkout from './Pages/Checkout '
-import CheakComponets from './Components/CheakComponets'
+import ProductPage from './Pages/ProductPage'
+import Checkout from './Pages/Checkout'
 const App = () => {
 const myRoute = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<LaoutOne/>}>
     <Route index element={<Home/>}/>
     <Route path='/Checkout' element={<Checkout/>}/>
-    <Route path='/CheakComponets' element={<CheakComponets/>}/>
+    <Route path='/ProductPage/:26' element={<ProductPage/>}/>
   </Route>
 ))
 

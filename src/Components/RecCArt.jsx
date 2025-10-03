@@ -11,16 +11,16 @@ const RecCArt = ({ img, title, price, catagory, discount, rating, stock, Details
         <div className="img-part w-full lg:h-[347px] bg-gray-300 rounded-[16px] relative group overflow-hidden duration-1000 mb-5">
           <div>
             <button className=" w-10 h-10 bg-white text-xl absolute top-7 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700">
-              <Link to={"/"}>
+              <Link to={"/ProductPage"}>
                 <FaCartPlus />
               </Link>
             </button>
 
-            <button className=" w-10 h-10 bg-white text-xl absolute top-20 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700'>">
-              <Link onClick={DetailsClick} to={"/"}>
+            <div className=" w-10 h-10 bg-white text-xl absolute top-20 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700'>">
+              <button onClick={DetailsClick}>
                 <RiMenuSearchFill />
-              </Link>
-            </button>
+              </button>
+            </div>
           </div>
 
           <img src={img} alt="img" />
