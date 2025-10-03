@@ -6,16 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
-  const navigate = useNavigate();
-
+  
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/products")
-      .then((res) => setAllproducts(res.data.products))
-      .catch((err) => /* RED BORDER: console.log below */ console.log(err));
+    .get("https://dummyjson.com/products")
+    .then((res) => setAllproducts(res.data.products))
+    .catch((err) => /* RED BORDER: console.log below */ console.log(err));
   }, []);
-
+  
   // -----------handleer -----------
+  const navigate = useNavigate();
+  
   const DetailsClick = (ProductSet) => {
     navigate(`/ProductPage/${ProductSet}`);
   };

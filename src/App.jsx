@@ -11,7 +11,7 @@ const myRoute = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<LaoutOne/>}>
     <Route index element={<Home/>}/>
     <Route path='/Checkout' element={<Checkout/>}/>
-    <Route path='/ProductPage/:26' element={<ProductPage/>}/>
+    <Route path='/ProductPage/:alus' element={<ProductPage/>}/>
   </Route>
 ))
 
