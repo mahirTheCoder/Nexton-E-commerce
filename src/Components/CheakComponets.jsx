@@ -157,6 +157,28 @@ const CheakComponets = () => {
                 </button>
               </div>
 
+              {/* -------------add to cart --------- */}
+              <div className="both-items mt-9.5 flex items-center justify-between
+               ">
+                <div className="cart-update w-27.5 h-10 bg-[#E5E7EB] rounded-4xl flex justify-between items-center px-2 ">
+                  <button className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
+                    -
+                  </button>
+                  <h2 className="text-base font-medium font-poppins text-primery">
+                    1
+                  </h2>
+                  <button className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
+                    +
+                  </button>
+                </div>
+
+                <Link to={'/'} className="cart-add w-[178px] h-[52px] bg-primery rounded-[9999px] flex  items-center justify-center text-white text-base font-medium font-poppins gap-2 ">
+                  <HiMiniShoppingBag className="text-base" />
+                  Add to cart
+                </Link>
+              </div>
+
+        
 
           {/* ---------------content ba details part----------- */}
           <div className="details-part mt-26 mb-24">
