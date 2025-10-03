@@ -8,18 +8,14 @@ import CommonHead from "./CommonHead";
 import RecCArt from "./RecCArt";
 
 const CheakComponets = () => {
+  const [allproducts, setAllproducts] = useState([]);
 
-  const [allproducts, setAllproducts] = useState ([]);
-
-  useEffect (() => {
+  useEffect(() => {
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setAllproducts(res.data.products))
-      .catch((err) => console.log(err));
+      .catch((err) => /* RED BORDER: console.log below */ console.log(err));
   }, []);
-
-  console.log(allproducts);
-
 
   const [img, setImg] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZq5cxkSyzBP_L8bkUUH1A_QIJaKeyjZjkPQ&s://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSftJ8OKRqa4P_nZbqMbOvHcW5uaNUXVYRphw&s"
@@ -158,8 +154,10 @@ const CheakComponets = () => {
               </div>
 
               {/* -------------add to cart --------- */}
-              <div className="both-items mt-9.5 flex items-center justify-between
-               ">
+              <div
+                className="both-items mt-9.5 flex items-center justify-between
+               "
+              >
                 <div className="cart-update w-27.5 h-10 bg-[#E5E7EB] rounded-4xl flex justify-between items-center px-2 ">
                   <button className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
                     -
@@ -172,7 +170,10 @@ const CheakComponets = () => {
                   </button>
                 </div>
 
-                <Link to={'/'} className="cart-add w-[178px] h-[52px] bg-primery rounded-[9999px] flex  items-center justify-center text-white text-base font-medium font-poppins gap-2 ">
+                <Link
+                  to={"/"}
+                  className="cart-add w-[178px] h-[52px] bg-primery rounded-[9999px] flex  items-center justify-center text-white text-base font-medium font-poppins gap-2 "
+                >
                   <HiMiniShoppingBag className="text-base" />
                   Add to cart
                 </Link>
@@ -180,35 +181,34 @@ const CheakComponets = () => {
 
               {/* ---------------discount & price--------------  */}
               <div className="discount-price flex justify-between mt-8 mb-2.5">
-                    <p className="text-base font-medium font-poppins text-primery">
-                   $169.99 x 1
-                  </p>
-                    <p className="text-base font-medium font-poppins text-primery">
-                   $169.99
-                  </p>
+                <p className="text-base font-medium font-poppins text-primery">
+                  $169.99 x 1
+                </p>
+                <p className="text-base font-medium font-poppins text-primery">
+                  $169.99
+                </p>
               </div>
               <div className="discount-price flex justify-between mt-2.5 mb-4">
-                    <p className="text-base font-medium font-poppins text-primery">
+                <p className="text-base font-medium font-poppins text-primery">
                   Tax estimate
-                  </p>
-                    <p className="text-base font-medium font-poppins text-primery">
-                   $0
-                  </p>
+                </p>
+                <p className="text-base font-medium font-poppins text-primery">
+                  $0
+                </p>
               </div>
 
               {/* -------------underlime ---------- */}
               <hr className="text-[#E5E7EB] mb-4" />
 
               {/* --------------total----------- */}
-               <div className="total flex justify-between ">
-                    <p className="text-base font-semibold font-poppins text-primery">
-                 Total
-                  </p>
-                    <p className="text-base font-semibold font-poppins text-primery">
+              <div className="total flex justify-between ">
+                <p className="text-base font-semibold font-poppins text-primery">
+                  Total
+                </p>
+                <p className="text-base font-semibold font-poppins text-primery">
                   $169.99
-                  </p>
+                </p>
               </div>
-
             </div>
           </div>
 
@@ -288,13 +288,10 @@ const CheakComponets = () => {
               </div>
             </div>
           </div>
-           
-           {/* -----------------api Recommended products--------- */}
-           <div className="header mb-10">
-            <CommonHead
-              common1={"Recommended products."}
-         
-            />
+
+          {/* -----------------api Recommended products--------- */}
+          <div className="header mb-10">
+            <CommonHead common1={"Recommended products."} />
           </div>
           <div className="slider-container">
             <div>
@@ -314,7 +311,6 @@ const CheakComponets = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>

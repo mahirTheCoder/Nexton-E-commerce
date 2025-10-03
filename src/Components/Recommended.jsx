@@ -10,10 +10,13 @@ const Recommended = () => {
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setAllproducts(res.data.products))
-      .catch((err) => console.log(err));
+      .catch((err) => /* RED BORDER: console.log below */ console.log(err));
   }, []);
 
-  console.log(allproducts);
+  // -----------handleer -----------
+  const DetailsClick = (ProductSet) => {
+    console.log(ProductSet);
+  }
 
   return (
     <>
@@ -38,6 +41,7 @@ const Recommended = () => {
                     discount={item.discountPercentage}
                     rating={item.rating}
                     stock={item.stock}
+                    DetailsClick={()=> DetailsClick(item.id)}
                   />
                 ))}
               </div>

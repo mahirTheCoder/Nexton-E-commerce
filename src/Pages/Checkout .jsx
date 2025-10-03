@@ -4,7 +4,6 @@ import CheakComponets from '../Components/CheakComponets'
 const Checkout  = () => {
   return (
     <>
-  <CheakComponets />
      </>
   )
 }

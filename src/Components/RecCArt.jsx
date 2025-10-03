@@ -4,7 +4,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { RiMenuSearchFill } from "react-icons/ri";
 import { Link } from "react-router";
 
-const RecCArt = ({ img, title, price, catagory, discount, rating, stock }) => {
+const RecCArt = ({ img, title, price, catagory, discount, rating, stock, DetailsClick }) => {
   return (
     <>
       <div className="recommenmded-content lg:w-[344px] lg:h-[448px] px-10 lg:px-0">
@@ -17,7 +17,7 @@ const RecCArt = ({ img, title, price, catagory, discount, rating, stock }) => {
             </button>
 
             <button className=" w-10 h-10 bg-white text-xl absolute top-20 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700'>">
-              <Link to={"/"}>
+              <Link onClick={DetailsClick} to={"/"}>
                 <RiMenuSearchFill />
               </Link>
             </button>

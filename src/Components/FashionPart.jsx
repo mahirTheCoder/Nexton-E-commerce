@@ -11,11 +11,13 @@ const FashionPart = () => {
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setShowAll(res.data.products))
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        /* handle error */
+      });
   }, []);
 
   useEffect(() => {
-    console.log(showAll);
+    // console.log removed
   }, [showAll]);
 
   const settings = {
@@ -53,7 +55,7 @@ const FashionPart = () => {
           </div>
           <div className="slider-container fashionSlider ">
             <Slider {...settings}>
-              {showAll.slice(15, 30).map((item) => (
+              {showAll.slice(0, 15).map((item) => (
                 <div key={item.id}>
                   <FashinCart
                     img={item.thumbnail}
