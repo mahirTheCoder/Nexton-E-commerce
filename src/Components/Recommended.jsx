@@ -16,7 +16,7 @@ const Recommended = () => {
   
   // -----------handleer -----------
   const navigate = useNavigate();
-  
+
   const DetailsClick = (ProductSet) => {
     navigate(`/ProductPage/${ProductSet}`);
   };
@@ -34,7 +34,7 @@ const Recommended = () => {
           <div className="slider-container">
             <div>
               <div className="recommended-items flex flex-wrap gap-10">
-                {allproducts.slice(25, 29).map((item) => (
+                {allproducts.slice(6, 10).map((item) => (
                   <RecCArt
                     key={item.id}
                     img={item.thumbnail}
