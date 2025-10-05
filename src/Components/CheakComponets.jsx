@@ -258,7 +258,7 @@ const CheakComponets = () => {
           <div className="slider-container">
             <div>
               <div className="recommended-items flex flex-wrap gap-10">
-                {allproducts.slice(5, 9).map((item) => (
+                {/* {allproducts.slice(5, 9).map((item) => (
                   <RecCArt
                     key={item.id}
                     img={item.thumbnail}
@@ -269,7 +269,7 @@ const CheakComponets = () => {
                     rating={item.rating}
                     stock={item.stock}
                   />
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
