@@ -17,13 +17,18 @@ const CheakComponets = () => {
       .catch((err) => console.log(err));
   }, []);
 
-
   // -----------use params---------
   const myparams = useParams();
 
   // -----------single product api -----------
   const [singleproduct, setSingleproduct] = useState();
-  const [image , setImage] = useState('https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg');
+  const [image, setImage] = useState();
+
+  useEffect(() => {
+    if (singleproduct?.images?.[0]) {
+      setImage(singleproduct.images[0]);
+    }
+  }, [singleproduct]);
 
   useEffect(() => {
     axios
@@ -32,8 +37,9 @@ const CheakComponets = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  // console.log(singleproduct?.images?.[0]);
+  // console.log(singleproduct?.images?.lentg [0]);
 
+  console.log(singleproduct);
 
   return (
     <>
@@ -46,7 +52,8 @@ const CheakComponets = () => {
               <div className="button-img flex justify-between">
                 <div className="button flex flex-col gap-4">
                   {singleproduct?.images?.map((item, i) => (
-                    <button onClick={() => setImage(item)}
+                    <button
+                      onClick={() => setImage(item)}
                       key={i}
                       className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px]"
                     >
