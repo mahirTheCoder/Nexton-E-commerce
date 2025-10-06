@@ -49,30 +49,45 @@ const CheakComponets = () => {
           <div className="img-and-content flex gap-10">
             {/* --------------img part------------- */}
             <div className="imgpart lg:w-[804px] h-[690px]  ">
-              <div className="button-img flex justify-between">
-                <div className="button flex flex-col gap-4">
-                  {singleproduct?.images?.map((item, i) => (
-                    <button
-                      onClick={() => setImage(item)}
-                      key={i}
-                      className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px]"
-                    >
-                      <img
-                        src={item}
-                        alt="product-img"
-                        className="w-full h-full"
-                      />
-                    </button>
-                  ))}
+              {singleproduct ? (
+                <div className="button-img flex justify-between">
+                  <div className="button flex flex-col gap-4">
+                    {singleproduct?.images?.map((item, i) => (
+                      <button
+                        onClick={() => setImage(item)}
+                        key={i}
+                        className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px]"
+                      >
+                        <img
+                          src={item}
+                          alt="product-img"
+                          className="w-full h-full"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                  <div className="img w-[640px] h-[690px]  overflow-hidden rounded-[16px]  ">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={image}
+                      alt="img"
+                    />
+                  </div>
                 </div>
-                <div className="img w-[640px] h-[690px]  overflow-hidden rounded-[16px]  ">
-                  <img
-                    className="w-full h-full object-cover"
-                    src={image}
-                    alt="img"
-                  />
+              ) : (
+                <div className="button-img  flex justify-between">
+                  <div className="bg-white p-4">
+                    <div className="flex gap-5 justify-between">
+                      <div className="flex flex-col gap-4">
+                        <button className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px] bg-gray-200 animate-pulse"></button>
+                        <button className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px] bg-gray-200 animate-pulse"></button>
+                        <button className="w-[140px] h-[158px] mb-4 overflow-hidden rounded-[16px] bg-gray-200 animate-pulse"></button>
+                      </div>
+                      <div className="w-[640px] h-[690px] overflow-hidden rounded-[16px] bg-gray-300 animate-pulse"></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* --------------cart part------------- */}
@@ -82,19 +97,22 @@ const CheakComponets = () => {
                 <div className="star flex gap-1.5">
                   <div className="text-base font-semibold font-poppins text-[#4B5563] flex gap-1.5">
                     {" "}
-                    <FaStar className="text-[#FBBF24]" /> {singleproduct?.rating} .
+                    <FaStar className="text-[#FBBF24]" />{" "}
+                    {singleproduct?.rating} .
                   </div>
                   <p className="text-base font-semibold font-poppins text-[#4B5563] underline ">
-                    {`${singleproduct?.reviews?.length}`} reviews
+                    142 reviews
                   </p>
                 </div>
                 <div className="price">
                   <h2 className="text-2xl font-semibold font-poppins text-primery">
-                 {singleproduct?.price - singleproduct.price * singleproduct.discountPercentage / 100}
+                    {singleproduct?.price -
+                      (singleproduct?.price *
+                        singleproduct?.discountPercentage) /
+                        100}
                   </h2>
                   <p className="text-sm font-medium font-poppins text-[#4B5563]">
-                    
-                    <del>{ singleproduct?.price} </del>
+                    <del>{singleproduct?.price} </del>
                   </p>
                 </div>
               </div>
