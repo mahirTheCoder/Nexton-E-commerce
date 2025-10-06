@@ -82,10 +82,10 @@ const CheakComponets = () => {
                 <div className="star flex gap-1.5">
                   <div className="text-base font-semibold font-poppins text-[#4B5563] flex gap-1.5">
                     {" "}
-                    <FaStar className="text-[#FBBF24]" /> 4.9
+                    <FaStar className="text-[#FBBF24]" /> {singleproduct?.rating}
                   </div>
                   <p className="text-base font-semibold font-poppins text-[#4B5563] underline ">
-                    142 reviews
+                    {` ${singleproduct.reviews.length}`} reviews
                   </p>
                 </div>
                 <div className="price">
