@@ -11,9 +11,14 @@ const DetailsRecom = () => {
               <img src={""} alt="img" />
             </div>
             {/* ----------prodict name and pricr ---- */}
-            <div className="">
+            <div className=" flex justify-between items-center px-2 mb-0.5">
               <h2 className="text-base font-semibold font-poppins text-primery ">Black Automatic Watch</h2>
               <h2 className="text-base font-semibold font-poppins text-primery ">$169.99</h2>
+            </div>
+            {/* ---------accesory discount price  */}
+            <div className=" flex justify-between items-center px-2 mb-1">
+              <h2 className="text-base font-normal font-poppins text-primery ">Ac-normal</h2>
+              <h2 className="text-base font-normal font-poppins text-primery ">$199.99</h2>
             </div>
           </div>
         </div>
