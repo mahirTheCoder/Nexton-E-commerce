@@ -6,6 +6,7 @@ import { HiMiniShoppingBag } from "react-icons/hi2";
 import { Link, useParams } from "react-router";
 import CommonHead from "./CommonHead";
 import RecCArt from "./RecCArt";
+import DetailsRecom from "./DetailsRecom";
 
 const CheakComponets = () => {
   const [allproducts, setAllproducts] = useState([]);
@@ -283,18 +284,7 @@ const CheakComponets = () => {
           <div className="slider-container">
             <div>
               <div className="recommended-items flex flex-wrap gap-10">
-                {/* {allproducts.slice(5, 9).map((item) => (
-                  <RecCArt
-                    key={item.id}
-                    img={item.thumbnail}
-                    title={item.title}
-                    price={item.price}
-                    catagory={item.category}
-                    discount={item.discountPercentage}
-                    rating={item.rating}
-                    stock={item.stock}
-                  />
-                ))} */}
+               <DetailsRecom />
               </div>
             </div>
           </div>

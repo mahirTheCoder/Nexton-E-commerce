@@ -7,7 +7,7 @@ const ProductPage = () => {
   return (
     <>
     <CheakComponets />
-    <DetailsRecom />
+    {/* <DetailsRecom /> */}
     </>
   )
 }
