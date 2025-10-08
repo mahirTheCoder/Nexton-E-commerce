@@ -24,6 +24,7 @@ const CheakComponets = () => {
   // -----------single product api -----------
   const [singleproduct, setSingleproduct] = useState();
   const [image, setImage] = useState();
+  const [allproduct, setAllproduct] = useState([]);
 
   useEffect(() => {
     if (singleproduct?.images?.[0]) {
@@ -41,16 +42,16 @@ const CheakComponets = () => {
       // ------------all product appi---------
      axios
       .get('https://dummyjson.com/products')
-      .then((res) => setSingleproduct(res.data))
+      .then((res) => setAllproduct(res.data.products))
       .catch((err) => console.log(err));
 
   }, []);
 
-  
+const catagoryProduct = allproducts.filter(item => item.category == singleproduct?.category)
 
   // console.log(singleproduct?.images?.lentg [0]);
 
-  // console.log(singleproduct);
+  console.log(allproduct);
 
   return (
     <>
