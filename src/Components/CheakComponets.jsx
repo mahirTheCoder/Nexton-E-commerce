@@ -107,10 +107,14 @@ const CheakComponets = () => {
                 </div>
                 <div className="price">
                   <h2 className="text-2xl font-semibold font-poppins text-primery">
-                    {singleproduct?.price -
-                      (singleproduct?.price *
-                        singleproduct?.discountPercentage) /
-                        100}
+                    {singleproduct?.price && singleproduct?.discountPercentage
+                      ? (
+                          singleproduct.price -
+                          (singleproduct.price *
+                            singleproduct.discountPercentage) /
+                            100
+                        ).toFixed(2)
+                      : ""}
                   </h2>
                   <p className="text-sm font-medium font-poppins text-[#4B5563]">
                     <del>{singleproduct?.price} </del>
@@ -284,7 +288,7 @@ const CheakComponets = () => {
           <div className="slider-container">
             <div>
               <div className="recommended-items flex flex-wrap gap-10">
-               <DetailsRecom />
+                <DetailsRecom />
               </div>
             </div>
           </div>
