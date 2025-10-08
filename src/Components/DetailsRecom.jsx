@@ -1,7 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const DetailsRecom = () => {
+const DetailsRecom = ({brandName , price,  Accessories, discountPrice , rating, stock}) => {
   return (
     <>
       <div className="DetailsRecom">
@@ -33,7 +33,7 @@ const DetailsRecom = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </>
   );
 };
