@@ -1,7 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const DetailsRecom = ({brandName , image, price,  Accessories, discountPrice , rating, stock}) => {
+const DetailsRecom = ({brandName , image, price,  Accessories,
+   discountPrice , rating, stock}) => {
   return (
     <>
       <div className="DetailsRecom">

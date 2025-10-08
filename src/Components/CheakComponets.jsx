@@ -300,9 +300,9 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
             <div>
               <div className="recommended-items flex flex-wrap justify-between gap-10">
                 {
-                  catagoryProduct.slice(0,4).map((item) => (
+                  catagoryProduct.slice(0,4).map((item, i) => (
 
-                    <DetailsRecom />
+                    <DetailsRecom key={i} image={item.thumbnail} brandName={item.title} price={item.price} Accessories={item.brand} discountPrice={item.discountPercentage} rating={item.rating} stock={item.stock} />
                   ))
                 }
               </div>
