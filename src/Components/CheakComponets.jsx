@@ -298,8 +298,13 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
           </div>
           <div className="slider-container">
             <div>
-              <div className="recommended-items flex flex-wrap gap-10">
-                <DetailsRecom />
+              <div className="recommended-items flex flex-wrap justify-between gap-10">
+                {
+                  catagoryProduct.slice(0,4).map((item) => (
+
+                    <DetailsRecom />
+                  ))
+                }
               </div>
             </div>
           </div>
