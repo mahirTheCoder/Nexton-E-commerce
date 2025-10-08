@@ -32,11 +32,21 @@ const CheakComponets = () => {
   }, [singleproduct]);
 
   useEffect(() => {
+    // ---------------single product api -----------
     axios
       .get(`https://dummyjson.com/products/${myparams.alus}`)
       .then((res) => setSingleproduct(res.data))
       .catch((err) => console.log(err));
+
+      // ------------all product appi---------
+     axios
+      .get('https://dummyjson.com/products')
+      .then((res) => setSingleproduct(res.data))
+      .catch((err) => console.log(err));
+
   }, []);
+
+  
 
   // console.log(singleproduct?.images?.lentg [0]);
 
