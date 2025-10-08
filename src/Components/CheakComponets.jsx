@@ -40,7 +40,7 @@ const CheakComponets = () => {
 
   // console.log(singleproduct?.images?.lentg [0]);
 
-  console.log(singleproduct);
+  // console.log(singleproduct);
 
   return (
     <>
