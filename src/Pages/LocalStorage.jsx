@@ -13,6 +13,9 @@ console.log(localdtaget);
   
   // -----------local storage data update --------
   localStorage.setItem("name", 20)
+  // -----------local storage data remove --------
+  localStorage.removeItem("roll")
+
 
 }
 
