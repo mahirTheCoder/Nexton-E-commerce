@@ -24,7 +24,7 @@ const CheakComponets = () => {
   // -----------single product api -----------
   const [singleproduct, setSingleproduct] = useState();
   const [image, setImage] = useState();
-  const [allproduct, setAllproduct] = useState([]);
+  const [allproduct, setAllproduct] = useState('');
 
   useEffect(() => {
     if (singleproduct?.images?.[0]) {
