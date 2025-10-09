@@ -10,6 +10,9 @@ console.log(localdtaget);
   // -----------local storatge data add ----------
   const handleClick = () => {
   localStorage.setItem("roll", 10)
+  
+  // -----------local storage data update --------
+  localStorage.setItem("name", 20)
 
 }
 
