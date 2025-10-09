@@ -51,7 +51,7 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
 
   // console.log(singleproduct?.images?.lentg [0]);
 
-  console.log(allproduct);
+  // console.log(allproduct);
 
   return (
     <>
