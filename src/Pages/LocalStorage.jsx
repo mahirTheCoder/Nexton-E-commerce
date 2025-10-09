@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 
 const LocalStorage = () => {
 
+// --------------local storage theke data neya -----
+const localdtaget = localStorage.getItem('name') 
+console.log(localdtaget);
 
-  
+
   // -----------local storatge data add ----------
   const handleClick = () => {
   localStorage.setItem("roll", 10)
