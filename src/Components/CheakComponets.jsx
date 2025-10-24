@@ -9,6 +9,7 @@ import RecCArt from "./RecCArt";
 import DetailsRecom from "./DetailsRecom";
 import BredCrums from "./BredCrums";
 
+
 const CheakComponets = () => {
   const [allproducts, setAllproducts] = useState([]);
 
@@ -53,7 +54,8 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
   // console.log(singleproduct?.images?.lentg [0]);
 
   // console.log(allproduct);
-  console.log(singleproduct)
+
+  // console.log(singleproduct)
 
   return (
     <>
