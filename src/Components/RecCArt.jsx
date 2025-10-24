@@ -4,7 +4,16 @@ import { FaCartPlus } from "react-icons/fa";
 import { RiMenuSearchFill } from "react-icons/ri";
 import { Link } from "react-router";
 
-const RecCArt = ({ img, title, price, catagory, discount, rating, stock, DetailsClick }) => {
+const RecCArt = ({
+  img,
+  title,
+  price,
+  catagory,
+  discount,
+  rating,
+  stock,
+  DetailsClick,
+}) => {
   return (
     <>
       <div className="recommenmded-content lg:w-[344px] lg:h-[448px] px-10 lg:px-0 mt-5 mb-5">

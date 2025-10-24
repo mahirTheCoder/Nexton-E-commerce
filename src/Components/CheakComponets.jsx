@@ -9,7 +9,6 @@ import RecCArt from "./RecCArt";
 import DetailsRecom from "./DetailsRecom";
 import BredCrums from "./BredCrums";
 
-
 const CheakComponets = () => {
   const [allproducts, setAllproducts] = useState([]);
 
@@ -26,7 +25,7 @@ const CheakComponets = () => {
   // -----------single product api -----------
   const [singleproduct, setSingleproduct] = useState();
   const [image, setImage] = useState();
-  const [allproduct, setAllproduct] = useState('');
+  const [allproduct, setAllproduct] = useState("");
 
   useEffect(() => {
     if (singleproduct?.images?.[0]) {
@@ -41,15 +40,16 @@ const CheakComponets = () => {
       .then((res) => setSingleproduct(res.data))
       .catch((err) => console.log(err));
 
-      // ------------all product appi---------
-     axios
-      .get('https://dummyjson.com/products')
+    // ------------all product appi---------
+    axios
+      .get("https://dummyjson.com/products")
       .then((res) => setAllproduct(res.data.products))
       .catch((err) => console.log(err));
-
   }, []);
 
-const catagoryProduct = allproducts.filter(item => item.category == singleproduct?.category)
+  const catagoryProduct = allproducts.filter(
+    (item) => item.category == singleproduct?.category
+  );
 
   // console.log(singleproduct?.images?.lentg [0]);
 
@@ -61,8 +61,10 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
     <>
       <section id="cheakout " className="mt-10">
         <div className="container">
-
-          <BredCrums pagename={'Products-details'} pagelink={`/ProductPage/${myparams.alus}`}  />
+          <BredCrums
+            pagename={"Products-details"}
+            pagelink={`/ProductPage/${myparams.alus}`}
+          />
           {/* ---------------img and cart part ------------- */}
           <div className=" mt-20 img-and-content flex gap-10">
             {/* --------------img part------------- */}
@@ -305,12 +307,18 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
           <div className="slider-container">
             <div>
               <div className="recommended-items flex flex-wrap justify-between gap-10">
-                {
-                  catagoryProduct.slice(0,4).map((item, i) => (
-
-                    <DetailsRecom key={i} image={item.thumbnail} brandName={item.title} price={item.price} Accessories={item.brand} discountPrice={item.discountPercentage} rating={item.rating} stock={item.stock} />
-                  ))
-                }
+                {catagoryProduct.slice(0, 4).map((item, i) => (
+                  <DetailsRecom
+                    key={i}
+                    image={item.thumbnail}
+                    brandName={item.title}
+                    price={item.price}
+                    Accessories={item.brand}
+                    discountPrice={item.discountPercentage}
+                    rating={item.rating}
+                    stock={item.stock}
+                  />
+                ))}
               </div>
             </div>
           </div>
