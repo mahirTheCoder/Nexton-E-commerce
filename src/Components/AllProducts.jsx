@@ -30,7 +30,12 @@ const AllProducts = () => {
           <div className="content ">
             <BredCrums pagename={"All-Product"} />
             <RecCArt />
-        
+            <Pagination
+              showSizeChanger
+              onShowSizeChange={onShowSizeChange}
+              defaultCurrent={3}
+              total={500}
+            />
           </div>
         </div>
       </section>
