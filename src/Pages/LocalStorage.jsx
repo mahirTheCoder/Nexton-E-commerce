@@ -1,29 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const LocalStorage = () => {
+  const myReduce = [ 1, 2, 3, 4, 5 , 22, 45, 67]
 
-// --------------local storage theke data neya -----
-const localdtaget = localStorage.getItem('name') 
-console.log(localdtaget);
+const totalcount = myReduce.reduce((num , sum )=> num = sum ,0)
 
-
-  // -----------local storatge data add ----------
-  const handleClick = () => {
-  localStorage.setItem("roll", 10)
-  
-  // -----------local storage data update --------
-  localStorage.setItem("name", 20)
-  // -----------local storage data remove --------
-  localStorage.removeItem("roll")
-
-
-}
+console.log(totalcount);
 
   return (
     <>
-   <div className="container">
-    <button onClick={handleClick} className='py-1 px-4 bg-gray-200 rounded-[4px] '> Click </button>
-   </div>
+    
     </>
   )
 }
