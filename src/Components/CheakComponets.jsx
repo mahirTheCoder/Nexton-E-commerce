@@ -53,13 +53,14 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
   // console.log(singleproduct?.images?.lentg [0]);
 
   // console.log(allproduct);
+  console.log(singleproduct)
 
   return (
     <>
       <section id="cheakout " className="mt-10">
         <div className="container">
 
-          <BredCrums pagename={'Products-details'} pagelink={`/ProductPage/${myparams.alus}`}/>
+          <BredCrums pagename={'Products-details'} pagelink={`/ProductPage/${myparams.alus}`}  />
           {/* ---------------img and cart part ------------- */}
           <div className=" mt-20 img-and-content flex gap-10">
             {/* --------------img part------------- */}

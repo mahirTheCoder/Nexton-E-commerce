@@ -2,7 +2,7 @@ import React from "react";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router";
 
-const BredCrums = ({pagename , pagelink}) => {
+const BredCrums = ({pagename , pagelink, subpage, sublink}) => {
 
 
   return (
@@ -10,7 +10,12 @@ const BredCrums = ({pagename , pagelink}) => {
       <div className="bredcrums flex items-center gap-2 ">
         <Link className="text-lg  font-normal text-gray-500 flex items-center gap-2 " to={"/"}><FaHome /> /</Link>
         <Link className="text-lg text-gray-500 font-normal flex items-center gap-2 " to={pagelink}>{pagename}</Link>
-      </div>
+     
+
+       
+          {/* <Link className="text-lg text-gray-500 font-normal flex items-center gap-2 " to={sublink}>{subpage}</Link> */}
+       
+      </div> 
     </>
   );
 };
