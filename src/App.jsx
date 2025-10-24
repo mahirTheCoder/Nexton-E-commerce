@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 import ProductPage from './Pages/ProductPage'
 import Checkout from './Pages/Checkout'
 import LocalStorage from './Pages/LocalStorage'
+import AllProducts from './Components/AllProducts'
 const App = () => {
 const myRoute = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<LaoutOne/>}>
@@ -14,6 +15,7 @@ const myRoute = createBrowserRouter(createRoutesFromElements(
     <Route path='/Checkout' element={<Checkout/>}/>
     <Route path='/ProductPage/:alus' element={<ProductPage/>}/>
     <Route path='/Localstorage' element={<LocalStorage/>}/>
+    <Route path='/AllProducts' element={<AllProducts/>}/>
   </Route>
 ))
 
