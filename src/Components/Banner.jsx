@@ -21,22 +21,22 @@ const Banner = () => {
         <div className="slider-container w-full">
           <Slider {...settings}>
             <div>
-              <Link to={"/"}>
+              <Link to={"/AllProducts"}>
                 <img className="w-full" src={banner} alt="banner" />
               </Link>
             </div>
             <div>
-              <Link to={"/"}>
+              <Link to={"/AllProducts"}>
                 <img className="w-full" src={banner} alt="banner" />
               </Link>
             </div>
             <div>
-              <Link to={"/"}>
+              <Link to={"/AllProducts"}>
                 <img className="w-full" src={banner} alt="banner" />
               </Link>
             </div>
             <div>
-              <Link to={"/"}>
+              <Link to={"/AllProducts"}>
                 <img className="w-full" src={banner} alt="banner" />
               </Link>
             </div>
