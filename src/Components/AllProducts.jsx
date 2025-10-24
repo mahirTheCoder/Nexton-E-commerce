@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import BredCrums from "./BredCrums";
 
 const AllProducts = () => {
   axios
@@ -7,7 +8,9 @@ const AllProducts = () => {
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
 
-  return <></>;
+  return <>
+ <BredCrums/> 
+  </>;
 };
 
 export default AllProducts;
