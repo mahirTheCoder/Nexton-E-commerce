@@ -7,6 +7,7 @@ import { Link, useParams } from "react-router";
 import CommonHead from "./CommonHead";
 import RecCArt from "./RecCArt";
 import DetailsRecom from "./DetailsRecom";
+import BredCrums from "./BredCrums";
 
 const CheakComponets = () => {
   const [allproducts, setAllproducts] = useState([]);
@@ -57,8 +58,10 @@ const catagoryProduct = allproducts.filter(item => item.category == singleproduc
     <>
       <section id="cheakout " className="mt-10">
         <div className="container">
+
+          <BredCrums pagename={'Products-details'} pagelink={`/ProductPage/${myparams.alus}`}/>
           {/* ---------------img and cart part ------------- */}
-          <div className="img-and-content flex gap-10">
+          <div className=" mt-20 img-and-content flex gap-10">
             {/* --------------img part------------- */}
             <div className="imgpart lg:w-[804px] h-[690px]  ">
               {singleproduct ? (
