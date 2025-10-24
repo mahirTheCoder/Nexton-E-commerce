@@ -7,9 +7,9 @@ const BredCrums = ({pagename , pagelink}) => {
 
   return (
     <>
-      <div className="bredcrums">
-        <Link className="text-lg  font-normal flex items-center gap-2 " to={"/"}><FaHome /> /</Link>
-        <Link className="text-lg  font-normal flex items-center gap-2 " to={pagelink}>{pagename}</Link>
+      <div className="bredcrums flex items-center gap-2 ">
+        <Link className="text-lg  font-normal text-gray-500 flex items-center gap-2 " to={"/"}><FaHome /> /</Link>
+        <Link className="text-lg text-gray-500 font-normal flex items-center gap-2 " to={pagelink}>{pagename}</Link>
       </div>
     </>
   );
