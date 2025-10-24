@@ -8,9 +8,15 @@ const AllProducts = () => {
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
 
-  return <>
- <BredCrums/> 
-  </>;
+  return (
+    <>
+      <section id="AllProdsucts">
+        <div className="container">
+          <BredCrums />
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default AllProducts;
