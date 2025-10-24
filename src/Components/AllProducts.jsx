@@ -29,7 +29,8 @@ const AllProducts = () => {
         <div className="container">
           <div className="content ">
             <BredCrums pagename={"All-Product"} />
-      
+            <RecCArt />
+        
           </div>
         </div>
       </section>
