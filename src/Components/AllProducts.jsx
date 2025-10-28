@@ -12,17 +12,17 @@ const AllProducts = () => {
   const [product, setProducts] = useState([]);
 
   // ----------- limi an dcurrent page er jonno hook-----
-  const [limitPage, setLimitPage] = useState(12);
+  const [limitPage, setLimitPage] = useState({ limit: 12, skip: 12 });
 
   useEffect(() => {
     // fetch once on mount
     axios
       .get(
-        `https://dummyjson.com/products?limit= ${limitPage} &skip=12&select=title,price,thumbnail,discountPercentage,rating,stock,total`
+        `https://dummyjson.com/products?limit=${limitPage.limit}&skip=${limitPage.skip}&select=title,price,thumbnail,discountPercentage,rating,stock,total`
       )
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
-  }, [limitPage]);
+  }, [limitPage.limit, limitPage.skip]);
 
   console.log(product);
 
@@ -33,10 +33,12 @@ const AllProducts = () => {
   // const currentpagepath = myLocation.pathname.split("/")[1];
 
   const onChangeItem = (current, pageSize) => {
-    console.log(current, pageSize);
-    setLimitPage(pageSize);
+    const skip = (current -1) * pageSize;
+    setLimitPage({
+      limit: pageSize,
+      skip: skip,
+    }); 
   };
-
 
   return (
     <>
@@ -45,10 +47,18 @@ const AllProducts = () => {
           <div className="content ">
             <BredCrums pagename={"All-Product"} />
             <div className="cntn flex justify-between flex-wrap">
-              {product.products?.map((item , i) => (
-                <RecCArt key={i} img={item.thumbnail} title={item.title} price={item.price} discount={item.discountPercentage  } rating={item.rating} stock={item.stock} />
+              {product.products?.map((item, i) => (
+                <RecCArt
+                  key={i}
+                  img={item.thumbnail}
+                  title={item.title}
+                  price={item.price}
+                  discount={item.discountPercentage}
+                  rating={item.rating}
+                  stock={item.stock}
+                />
               ))}
-            </div>  
+            </div>
 
             <Pagination
               showSizeChanger
@@ -57,7 +67,7 @@ const AllProducts = () => {
               total={product.total}
               align="end"
             />
-          </div> 
+          </div>
         </div>
       </section>
     </>
