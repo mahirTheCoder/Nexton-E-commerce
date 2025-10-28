@@ -11,11 +11,14 @@ const AllProducts = () => {
   // products fetched from API
   const [products, setProducts] = useState([]);
 
+  // ----------- limi an dcurrent page er jonno hook-----
+  const [limitPage, setLimitPage] = useState(10);
+
   useEffect(() => {
     // fetch once on mount
     axios
       .get(
-        "https://dummyjson.com/products?limit=15&skip=10&select=title,price,thumbnail,discountPercentage,rating,stock"
+        `https://dummyjson.com/products?limit= ${limitPage} &skip=10&select=title,price,thumbnail,discountPercentage,rating,stock`
       )
       .then((res) => setProducts(res.data.products))
       .catch((err) => console.log(err));
@@ -31,7 +34,10 @@ const AllProducts = () => {
 
   const onChangeItem = (current, pageSize) => {
     console.log(current, pageSize);
+    setLimitPage(pageSize);
   };
+
+  console.log(limitPage);
 
   return (
     <>
@@ -41,9 +47,9 @@ const AllProducts = () => {
             <BredCrums pagename={"All-Product"} />
             <div className="cntn flex justify-between flex-wrap">
               {products.map((item , i) => (
-                <RecCArt key={i} img={item.thumbnail} title={item.title} price={item.discountPercentage} rating={item.rating} stock={item.stock} />
+                <RecCArt key={i} img={item.thumbnail} title={item.title} price={item.price} discount={item.discountPercentage  } rating={item.rating} stock={item.stock} />
               ))}
-            </div>
+            </div> 
 
             <Pagination
               showSizeChanger
