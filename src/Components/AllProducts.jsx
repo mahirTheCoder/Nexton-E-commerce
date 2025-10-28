@@ -9,22 +9,22 @@ const AllProducts = () => {
   // ----------limit and skip with select example----------
 
   // products fetched from API
-  const [products, setProducts] = useState([]);
+  const [product, setProducts] = useState([]);
 
   // ----------- limi an dcurrent page er jonno hook-----
-  const [limitPage, setLimitPage] = useState(10);
+  const [limitPage, setLimitPage] = useState(12);
 
   useEffect(() => {
     // fetch once on mount
     axios
       .get(
-        `https://dummyjson.com/products?limit= ${limitPage} &skip=10&select=title,price,thumbnail,discountPercentage,rating,stock`
+        `https://dummyjson.com/products?limit= ${limitPage} &skip=12&select=title,price,thumbnail,discountPercentage,rating,stock,total`
       )
-      .then((res) => setProducts(res.data.products))
+      .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [limitPage]);
 
-  console.log(products);
+  console.log(product);
 
   // ----------use location example----------
   const myLocation = useLocation();
@@ -37,7 +37,6 @@ const AllProducts = () => {
     setLimitPage(pageSize);
   };
 
-  console.log(limitPage);
 
   return (
     <>
@@ -46,7 +45,7 @@ const AllProducts = () => {
           <div className="content ">
             <BredCrums pagename={"All-Product"} />
             <div className="cntn flex justify-between flex-wrap">
-              {products.map((item , i) => (
+              {product.products?.map((item , i) => (
                 <RecCArt key={i} img={item.thumbnail} title={item.title} price={item.price} discount={item.discountPercentage  } rating={item.rating} stock={item.stock} />
               ))}
             </div> 
