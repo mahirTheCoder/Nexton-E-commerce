@@ -30,7 +30,7 @@ const AllProducts = () => {
   const myLocation = useLocation();
   // console.log(myLocation.pathname.split("/")[1]);
 
-  const currentpagepath = myLocation.pathname.split("/")[1];
+  // const currentpagepath = myLocation.pathname.split("/")[1];
 
   const onChangeItem = (current, pageSize) => {
     console.log(current, pageSize);
@@ -48,16 +48,16 @@ const AllProducts = () => {
               {product.products?.map((item , i) => (
                 <RecCArt key={i} img={item.thumbnail} title={item.title} price={item.price} discount={item.discountPercentage  } rating={item.rating} stock={item.stock} />
               ))}
-            </div> 
+            </div>  
 
             <Pagination
               showSizeChanger
               onChange={onChangeItem}
               defaultCurrent={1}
-              total={500}
+              total={product.total}
               align="end"
             />
-          </div>
+          </div> 
         </div>
       </section>
     </>
