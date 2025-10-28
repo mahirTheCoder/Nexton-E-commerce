@@ -40,8 +40,8 @@ const AllProducts = () => {
           <div className="content ">
             <BredCrums pagename={"All-Product"} />
             <div className="cntn flex justify-between flex-wrap">
-              {products.map((item) => (
-                <RecCArt />
+              {products.map((item , i) => (
+                <RecCArt key={i} img={item.thumbnail} title={item.title} price={item.discountPercentage} rating={item.rating} stock={item.stock} />
               ))}
             </div>
 
