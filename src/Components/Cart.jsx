@@ -39,7 +39,7 @@ const Cart = ({ isOpen, closeCart }) => {
               </div>
             </div>
             <div className="cardItems flex mt-5 gap-5">
-              <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl "></div>
+               <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl "></div>
               <div className="cardItem">
                 <h2 className="text-lg font-medium to-black font-poppins">
                   product Name

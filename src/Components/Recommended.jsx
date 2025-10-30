@@ -21,6 +21,26 @@ const Recommended = () => {
     navigate(`/ProductPage/${ProductSet}`);
   };
 
+
+// -----------add to card -------------
+
+function generateRandomID() {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+
+  for (let i = 0; i < 16; i++) {
+    const randomIndex = Math.floor(Math.random() * chars.length);
+    result += chars[randomIndex];
+  }
+
+  return result;
+}
+
+// Example usage:
+console.log(generateRandomID());
+
+
+
   return (
     <>
       <section id="Recommended" className="Recommended  mt-44">

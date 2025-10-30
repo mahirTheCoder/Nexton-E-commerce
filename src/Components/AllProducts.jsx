@@ -56,6 +56,7 @@ const AllProducts = () => {
                   discount={item.discountPercentage}
                   rating={item.rating}
                   stock={item.stock}
+                  
                 />
               ))}
             </div>
@@ -66,6 +67,7 @@ const AllProducts = () => {
               defaultCurrent={1}
               total={product.total}
               align="end"
+              pageSizeOptions={[12, 24, 40, 50, 80, 100]}
             />
           </div>
         </div>
