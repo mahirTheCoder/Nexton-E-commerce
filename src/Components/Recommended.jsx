@@ -37,11 +37,20 @@ function generateRandomID() {
 }
 
 // Example usage:
-console.log(generateRandomID());
+// console.log(generateRandomID());
 
+const ProductArray = []
 
 const handlecartadd = (product) => {
 console.log(product)
+const productObject = {
+ 
+id: product,
+quantity:1
+}
+ProductArray.push(productObject)
+console.log(ProductArray)
+
 }
 
 

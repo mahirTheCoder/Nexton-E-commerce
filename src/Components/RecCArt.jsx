@@ -21,7 +21,7 @@ const RecCArt = ({
         <div className="img-part w-full lg:h-[347px] bg-gray-300 rounded-[16px] relative group overflow-hidden duration-1000 mb-5">
           <div>
             <button onClick={cardClick} className=" w-10 h-10 bg-white text-xl absolute top-7 group-hover:right-7 right-[-50px] flex justify-center items-center rounded-full shadow-lg hover:bg-primery hover:text-white transition-all duration-700">
-              <Link to={"/ProductPage"}>
+              <Link to={""}>
                 <FaCartPlus />
               </Link>
             </button>
