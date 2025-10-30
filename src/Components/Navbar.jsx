@@ -35,9 +35,11 @@ const Navbar = () => {
 
               {/* ------------------cart buttons------------- */}
               <div className="buttons flex gap-4.5">
-                <Link to={"/login"}>
+                <button>
+                  <Link to={"/Register"}>
                   <RiUser3Line className="text-2xl text-[#4B5563] " />
-                </Link>
+                  </Link>
+                </button>
                 <button onClick={() => setShowCArt(true)} className=" relative">
                   <IoCartOutline className="text-2xl text-[#4B5563]  " />
                   <div className="round w-5 h-5 bg-[#0EA5E9] rounded-4xl flex justify-center items-center text-sm font-poppins font-normal text-[#FFF]  absolute top-1 right-[-9px]">
