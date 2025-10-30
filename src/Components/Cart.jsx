@@ -1,26 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Cart = ({ isOpen, closeCart }) => {
+  const [cartData, setCartData] = useState([]);
 
-const [cartData, setCartData] =useState (null);
-
-useEffect(()=>{
-  axios.get('https://dummyjson.com/carts/1')
-  .then(res=>console.log(res.data))
-  .catch(err=>console.log(err))
-},[])
-  
-
-
-
-
-
-
-
-
-
+  useEffect(() => {
+    axios
+      .get("https://dummyjson.com/carts/1")
+      .then((res) => {
+        console.log(res);
+        setCartData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <>
@@ -42,28 +35,30 @@ useEffect(()=>{
             isOpen ? "translate-x-0" : "translate-x-full"
           } p-5 overflow-hidden z-20`}
         >
-          
           <h2 className="text-xl font-poppins font-medium text-[#000]">Cart</h2>
 
           {/* ---------cart items -------- */}
           <div className="w-full lg:h-[90%] h-[70%] overflow-y-scroll">
-
-
-
-            <div className="cardItems flex mt-5 gap-5">
-              <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl "></div>
-              <div className="cardItem">
-                <h2 className="text-lg font-medium to-black font-poppins">
-                  product Name
-                </h2>
-                <h2 className="text-base font-medium to-black font-poppins">
-                  product price
-                </h2>
-              </div>
-            </div>
-
-    
-          
+            {cartData &&
+              cartData.products?.map((item, i) => (
+                <div key={i} className="cardItems flex mt-5 gap-5">
+                  <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl">
+                    <img
+                      src={item.thumbnail}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                  <div className="cardItem">
+                    <h2 className="text-lg font-medium to-black font-poppins">
+                      {item.title}
+                    </h2>
+                    <h2 className="text-base font-medium to-black font-poppins">
+                      ${item.price}
+                    </h2>
+                  </div>
+                </div>
+              ))}
           </div>
 
           {/* ----------chrakout button and product sum ----- */}
@@ -72,7 +67,7 @@ useEffect(()=>{
               SubTotal
             </p>
             <p className="text-base font-medium font-poppins text-black">
-              $350
+              ${cartData.total}
             </p>
           </div>
 
