@@ -1,11 +1,16 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const Cart = ({ isOpen, closeCart }) => {
 
+const [cartData, setCartData] =useState (null);
 
-
-
+useEffect(()=>{
+  axios.get('https://dummyjson.com/carts/1')
+  .then(res=>console.log(res.data))
+  .catch(err=>console.log(err))
+},[])
   
 
 
@@ -42,6 +47,9 @@ const Cart = ({ isOpen, closeCart }) => {
 
           {/* ---------cart items -------- */}
           <div className="w-full lg:h-[90%] h-[70%] overflow-y-scroll">
+
+
+
             <div className="cardItems flex mt-5 gap-5">
               <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl "></div>
               <div className="cardItem">
@@ -53,28 +61,7 @@ const Cart = ({ isOpen, closeCart }) => {
                 </h2>
               </div>
             </div>
-            <div className="cardItems flex mt-5 gap-5">
-               <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl "></div>
-              <div className="cardItem">
-                <h2 className="text-lg font-medium to-black font-poppins">
-                  product Name
-                </h2>
-                <h2 className="text-base font-medium to-black font-poppins">
-                  product price
-                </h2>
-              </div>
-            </div>
-            <div className="cardItems flex mt-5 gap-5">
-              <div className="cardIMg w-15 h-15 bg-gray-300 rounded-xl "></div>
-              <div className="cardItem">
-                <h2 className="text-lg font-medium to-black font-poppins">
-                  product Name
-                </h2>
-                <h2 className="text-base font-medium to-black font-poppins">
-                  product price
-                </h2>
-              </div>
-            </div>
+
     
           
           </div>
