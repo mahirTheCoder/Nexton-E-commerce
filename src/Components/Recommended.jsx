@@ -3,6 +3,7 @@ import RecCArt from "./RecCArt";
 import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
 import { useNavigate } from "react-router-dom";
+import Cookies from 'js-cookie';
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
@@ -36,8 +37,16 @@ function generateRandomID() {
   return result;
 }
 
+
 // Example usage:
 // console.log(generateRandomID());
+
+// -----------cookies add-------------
+
+Cookies.set ('userId', generateRandomID, { expires: 7, path: '' })
+
+
+
 
 const ProductArray = []
 
@@ -50,6 +59,8 @@ quantity:1
 }
 ProductArray.push(productObject)
 console.log(ProductArray)
+
+ 
 
 }
 
