@@ -40,6 +40,10 @@ function generateRandomID() {
 console.log(generateRandomID());
 
 
+const handlecartadd = (product) => {
+console.log(product)
+}
+
 
   return (
     <>
@@ -65,6 +69,7 @@ console.log(generateRandomID());
                     rating={item.rating}
                     stock={item.stock}
                     DetailsClick={() => DetailsClick(item.id)}
+                    cardClick = {()=>{handlecartadd(item.id)}}
                   />
                 ))}
               </div>
