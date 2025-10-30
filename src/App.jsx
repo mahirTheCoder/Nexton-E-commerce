@@ -8,6 +8,8 @@ import ProductPage from "./Pages/ProductPage";
 import Checkout from "./Pages/Checkout";
 import LocalStorage from "./Pages/LocalStorage";
 import AllProducts from "./Components/AllProducts";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 const App = () => {
   const myRoute = createBrowserRouter(
     createRoutesFromElements(
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/ProductPage/:alus" element={<ProductPage />} />
         <Route path="/Localstorage" element={<LocalStorage />} />
         <Route path="/AllProducts" element={<AllProducts />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
       </Route>
     )
   );
