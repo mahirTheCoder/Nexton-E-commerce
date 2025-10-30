@@ -3,19 +3,19 @@ import RecCArt from "./RecCArt";
 import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
 import { useNavigate } from "react-router-dom";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 import { Slide, toast } from "react-toastify";
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
-  
+
   useEffect(() => {
     axios
-    .get("https://dummyjson.com/products")
-    .then((res) => setAllproducts(res.data.products))
-    .catch((err) => /* RED BORDER: console.log below */ console.log(err));
+      .get("https://dummyjson.com/products")
+      .then((res) => setAllproducts(res.data.products))
+      .catch((err) => /* RED BORDER: console.log below */ console.log(err));
   }, []);
-  
+
   // -----------handleer -----------
   const navigate = useNavigate();
 
@@ -23,73 +23,68 @@ const Recommended = () => {
     navigate(`/ProductPage/${ProductSet}`);
   };
 
+  // -----------add to card -------------
 
-// -----------add to card -------------
-
-function generateRandomID() {
- let number = '';
-  for (let i = 0; i < 16; i++) {
-    number += Math.floor(Math.random() * 10); // 0 থেকে 9 পর্যন্ত random digit
+  function generateRandomID() {
+    let number = "";
+    for (let i = 0; i < 16; i++) {
+      number += Math.floor(Math.random() * 10); // 0 থেকে 9 পর্যন্ত random digit
+    }
+    return number;
   }
-  return number;
-}
 
+  // Example usage:
+  // console.log(generateRandomID());
 
-// Example usage:
-// console.log(generateRandomID());
+  // -----------cookies add-------------
 
-// -----------cookies add-------------
+  Cookies.set("userId", generateRandomID, { expires: 7, path: "" });
 
-Cookies.set ('userId', generateRandomID, { expires: 7, path: '' })
+  const ProductArray = [];
 
+  // -----------handle cart add -------------
 
+  const handlecartadd = (product) => {
+    console.log(product);
+    const productObject = {
+      id: product,
+      quantity: 1,
+    };
+    ProductArray.push(productObject);
+    console.log(ProductArray);
 
-
-const ProductArray = []
-
-const handlecartadd = (product) => {
-console.log(product)
-const productObject = {
- 
-id: product,
-quantity:1
-}
-ProductArray.push(productObject)
-console.log(ProductArray)
-
- axios.post('https://dummyjson.com/carts/add', {
-  userId: 1,
-  products: ProductArray
- })
- .then((ress)=>{
- toast.success(" Product Added Successfully!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Slide,
-});
- })
-  .catch((err)=>{
-    toast.warn('Product no added!', {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
-  })
-
-}
-
+    axios
+      .post("https://dummyjson.com/carts/add", {
+        userId: 1,
+        products: ProductArray,
+      })
+      .then((ress) => {
+        toast.success(" Product Added Successfully!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Slide,
+        });
+      })
+      .catch((err) => {
+        toast.warn("Product no added!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+      });
+  };
 
   return (
     <>
@@ -115,7 +110,9 @@ transition: Bounce,
                     rating={item.rating}
                     stock={item.stock}
                     DetailsClick={() => DetailsClick(item.id)}
-                    cardClick = {()=>{handlecartadd(item.id)}}
+                    cardClick={() => {
+                      handlecartadd(item.id);
+                    }}
                   />
                 ))}
               </div>
