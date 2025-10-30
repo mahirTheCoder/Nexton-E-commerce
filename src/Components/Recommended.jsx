@@ -4,6 +4,7 @@ import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
 import { useNavigate } from "react-router-dom";
 import Cookies from 'js-cookie';
+import { Slide, toast } from "react-toastify";
 
 const Recommended = () => {
   const [allproducts, setAllproducts] = useState([]);
@@ -26,15 +27,11 @@ const Recommended = () => {
 // -----------add to card -------------
 
 function generateRandomID() {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let result = '';
-
+ let number = '';
   for (let i = 0; i < 16; i++) {
-    const randomIndex = Math.floor(Math.random() * chars.length);
-    result += chars[randomIndex];
+    number += Math.floor(Math.random() * 10); // 0 থেকে 9 পর্যন্ত random digit
   }
-
-  return result;
+  return number;
 }
 
 
@@ -60,7 +57,36 @@ quantity:1
 ProductArray.push(productObject)
 console.log(ProductArray)
 
- 
+ axios.post('https://dummyjson.com/carts/add', {
+  userId: 1,
+  products: ProductArray
+ })
+ .then((ress)=>{
+ toast.success(" Product Added Successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Slide,
+});
+ })
+  .catch((err)=>{
+    toast.warn('Product no added!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
+  })
 
 }
 
