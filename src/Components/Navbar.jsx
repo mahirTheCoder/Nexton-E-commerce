@@ -10,21 +10,25 @@ import axios from "axios";
 const Navbar = () => {
   const [showCart, setShowCArt] = useState(false);
 
-
   // ---------search part------------
-const handleSearch =(mango)=> {
-console.log(mango);
-setTimeout(()=>{
-  axios
-  .get(`https://dummyjson.com/products/search?q=${mango}`)
-  .then((res)=>{
-    console.log(res.data);
-  })
-  .catch((err)=>console.log(err));
 
-},500)
-}
+  const [searchTerm, setSearchTerm] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
 
+  const handleSearch = (mango) => {
+    console.log(mango);
+    setTimeout(() => {
+      axios
+        .get(`https://dummyjson.com/products/search?q=${mango}`)
+        .then((res) => {
+          setSearchResults(res.data.products);
+          setSearchTerm(true);
+        })
+        .catch((err) => console.log(err));
+    }, 500);
+  };
+
+  console.log(searchResults);
 
   return (
     <>
@@ -40,22 +44,35 @@ setTimeout(()=>{
               </div>
 
               {/* -----------input search------------- */}
-              <div className="search w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] flex gap-2 items-center px-6">
+              <div className="search w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] flex gap-2 items-center px-6 relative ">
                 <CiSearch className="text-xl text-[#4B5563]" />
 
-                <input 
-                  onChange={(e)=>handleSearch(e.target.value)}
+                <input
+                  onChange={(e) => handleSearch(e.target.value)}
                   type="text"
                   placeholder="Search in products..."
                   className="text-[#4B5563] w-full border-none outline-none font-poppins"
                 />
+
+                {searchTerm && (
+                  <div className="sercItem w-[400px] p-3 bg-gray-200 absolute top-25 rounded-2xl z-10  ">
+                    {searchResults.map((item, i) => (
+                      <h2
+                        key={i}
+                        className="text-sm font-medium font-poppins text-black py-1"
+                      >
+                        {item.title}
+                      </h2>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* ------------------cart buttons------------- */}
               <div className="buttons flex gap-4.5">
                 <button>
                   <Link to={"/Login"}>
-                  <RiUser3Line className="text-2xl text-[#4B5563] " />
+                    <RiUser3Line className="text-2xl text-[#4B5563] " />
                   </Link>
                 </button>
                 <button onClick={() => setShowCArt(true)} className=" relative">
