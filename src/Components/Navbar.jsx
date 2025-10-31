@@ -5,9 +5,26 @@ import { RiUser3Line } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import Cart from "./Cart";
 import { Link } from "react-router";
+import axios from "axios";
 
 const Navbar = () => {
   const [showCart, setShowCArt] = useState(false);
+
+
+  // ---------search part------------
+const handleSearch =(mango)=> {
+console.log(mango);
+setTimeout(()=>{
+  axios
+  .get(`https://dummyjson.com/products/search?q=${mango}`)
+  .then((res)=>{
+    console.log(res.data);
+  })
+  .catch((err)=>console.log(err));
+
+},500)
+}
+
 
   return (
     <>
@@ -26,7 +43,8 @@ const Navbar = () => {
               <div className="search w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] flex gap-2 items-center px-6">
                 <CiSearch className="text-xl text-[#4B5563]" />
 
-                <input
+                <input 
+                  onChange={(e)=>handleSearch(e.target.value)}
                   type="text"
                   placeholder="Search in products..."
                   className="text-[#4B5563] w-full border-none outline-none font-poppins"
