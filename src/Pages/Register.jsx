@@ -70,10 +70,10 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center ">
-      <div className="w-full max-w-sm p-8 space-y-6 bg-white rounded-2xl shadow-lg ring-1 ring-gray-200">
+    <div className=" mt-25 mb-25 flex items-center justify-center ">
+      <div className="w-full max-w-sm p-5 space-y-6 bg-white rounded-2xl shadow-lg ring-1 ring-gray-200">
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl font-bold text-gray-900">Create account</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Register</h1>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-6">

@@ -36,7 +36,7 @@ const Navbar = () => {
               {/* ------------------cart buttons------------- */}
               <div className="buttons flex gap-4.5">
                 <button>
-                  <Link to={"/Register"}>
+                  <Link to={"/Login"}>
                   <RiUser3Line className="text-2xl text-[#4B5563] " />
                   </Link>
                 </button>
