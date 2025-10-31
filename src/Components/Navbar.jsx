@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiUser3Line } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import Cart from "./Cart";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import axios from "axios";
 
 const Navbar = () => {
@@ -27,6 +27,15 @@ const Navbar = () => {
     }, 500);
   };
 
+
+
+// --------------product id catch----------
+const navigate = useNavigate(); 
+
+const handleProducts = (FoundProducts)=>{
+console.log(FoundProducts);
+navigate(`/ProductPage/${FoundProducts}`);
+}
 
   return (
     <>
@@ -55,19 +64,23 @@ const Navbar = () => {
                 {searchTerm && (
                   <div className="sercItem w-[400px] p-3 bg-gray-200 absolute top-25 rounded-2xl z-10  ">
 
-                 {
-                  searchResults.length == 0?
-                  <h2 className="text-sm font-medium font-poppins text-black py-1">No results found</h2>
-                  : null
-                 }
-
-                    {
-                    searchResults.map((item, i) => (
-                      <h2
-                        key={i}
-                        className="text-sm font-medium font-poppins text-black py-1">
-                        {item.title}
+                    {/* ---------no product founded --------- */}
+                    {searchResults.length == 0 ? (
+                      <h2 className="text-sm font-medium font-poppins text-black py-1">
+                        No results found
                       </h2>
+                    ) : ''}
+
+
+                    {/* --------sewarch result added------ */}
+                    {searchResults.map((item, i) => (
+                      <button
+                        onClick={() => handleProducts(item.id)}
+                        key={i}
+                        className="text-sm font-medium font-poppins block text-black py-1"
+                      >
+                        {item.title}
+                      </button>
                     ))}
                   </div>
                 )}
