@@ -16,7 +16,6 @@ const Navbar = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = (mango) => {
-    console.log(mango);
     setTimeout(() => {
       axios
         .get(`https://dummyjson.com/products/search?q=${mango}`)
@@ -28,7 +27,6 @@ const Navbar = () => {
     }, 500);
   };
 
-  console.log(searchResults);
 
   return (
     <>
@@ -56,11 +54,18 @@ const Navbar = () => {
 
                 {searchTerm && (
                   <div className="sercItem w-[400px] p-3 bg-gray-200 absolute top-25 rounded-2xl z-10  ">
-                    {searchResults.map((item, i) => (
+
+                 {
+                  searchResults.length == 0?
+                  <h2 className="text-sm font-medium font-poppins text-black py-1">No results found</h2>
+                  : null
+                 }
+
+                    {
+                    searchResults.map((item, i) => (
                       <h2
                         key={i}
-                        className="text-sm font-medium font-poppins text-black py-1"
-                      >
+                        className="text-sm font-medium font-poppins text-black py-1">
                         {item.title}
                       </h2>
                     ))}
