@@ -227,7 +227,7 @@ const CheakComponets = () => {
                   Total
                 </p>
                 <p className="text-base font-semibold font-poppins text-primery">
-                  $169.99
+                { singleproduct.price * quantity }
                 </p>
               </div>
             </div>
