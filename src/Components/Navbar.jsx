@@ -4,8 +4,8 @@ import { CiSearch } from "react-icons/ci";
 import { RiUser3Line } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import Cart from "./Cart";
-import { Link, useNavigate } from "react-router";
 import axios from "axios";
+import { Link, useNavigate } from "react-router";
 
 const Navbar = () => {
   const [showCart, setShowCArt] = useState(false);
@@ -33,8 +33,10 @@ const Navbar = () => {
 const navigate = useNavigate(); 
 
 const handleProducts = (FoundProducts)=>{
-console.log(FoundProducts);
+  setSearchResults([]);
+  setSearchTerm(false);
 navigate(`/ProductPage/${FoundProducts}`);
+
 }
 
   return (
