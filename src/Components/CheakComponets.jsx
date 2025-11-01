@@ -57,6 +57,9 @@ const CheakComponets = () => {
 
   // console.log(singleproduct)
 
+  // --------------product quantity---------
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <>
       <section id="cheakout " className="mt-10">
@@ -170,14 +173,21 @@ const CheakComponets = () => {
                "
               >
                 <div className="cart-update w-27.5 h-10 bg-[#E5E7EB] rounded-4xl flex justify-between items-center px-2 ">
-                  <button className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
+                  <button onClick={()=>{
+                       if(quantity == 1){
+                      console.log('ok')
+                    }else{
+                     setQuantity(quantity - 1) 
+                    }
+                  }} className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
                     -
                   </button>
                   <h2 className="text-base font-medium font-poppins text-primery">
-                    1
+                   {quantity}
                   </h2>
-                  <button className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
-                    +
+                  <button onClick={()=>{setQuantity (quantity + 1)}}
+                   className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
+                  +
                   </button>
                 </div>
 
