@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RecCArt from "./RecCArt";
 import axios, { Axios } from "axios";
 import CommonHead from "./CommonHead";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import Cookies from "js-cookie";
 import { Slide, toast } from "react-toastify";
 
@@ -13,7 +13,7 @@ const Recommended = () => {
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setAllproducts(res.data.products))
-      .catch((err) => /* RED BORDER: console.log below */ console.log(err));
+      .catch((err) => console.error("Error fetching products:", err));
   }, []);
 
   // -----------handleer -----------
@@ -28,13 +28,10 @@ const Recommended = () => {
   function generateRandomID() {
     let number = "";
     for (let i = 0; i < 16; i++) {
-      number += Math.floor(Math.random() * 10); // 0 থেকে 9 পর্যন্ত random digit
+      number += Math.floor(Math.random() * 10);
     }
     return number;
   }
-
-  // Example usage:
-  // console.log(generateRandomID());
 
   // -----------cookies add-------------
 
@@ -45,13 +42,11 @@ const Recommended = () => {
   // -----------handle cart add -------------
 
   const handlecartadd = (product) => {
-    console.log(product);
     const productObject = {
       id: product,
       quantity: 1,
     };
     ProductArray.push(productObject);
-    console.log(ProductArray);
 
     axios
       .post("https://dummyjson.com/carts/add", {

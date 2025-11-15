@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
-import { createRoutesFromElements } from "react-router-dom";
+import { createBrowserRouter, Route, RouterProvider } from "react-router";
+import { createRoutesFromElements } from "react-router";
 import LaoutOne from "./Layouts/LaoutOne";
 import Home from "./Pages/Home";
 import ProductPage from "./Pages/ProductPage";

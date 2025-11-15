@@ -15,29 +15,23 @@ const AllProducts = () => {
   const [limitPage, setLimitPage] = useState({ limit: 12, skip: 12 });
 
   useEffect(() => {
-    // fetch once on mount
+    // Fetch products with pagination
     axios
       .get(
         `https://dummyjson.com/products?limit=${limitPage.limit}&skip=${limitPage.skip}&select=title,price,thumbnail,discountPercentage,rating,stock,total`
       )
       .then((res) => setProducts(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error("Error fetching products:", err));
   }, [limitPage.limit, limitPage.skip]);
 
-  console.log(product);
-
-  // ----------use location example----------
   const myLocation = useLocation();
-  // console.log(myLocation.pathname.split("/")[1]);
-
-  // const currentpagepath = myLocation.pathname.split("/")[1];
 
   const onChangeItem = (current, pageSize) => {
-    const skip = (current -1) * pageSize;
+    const skip = (current - 1) * pageSize;
     setLimitPage({
       limit: pageSize,
       skip: skip,
-    }); 
+    });
   };
 
   return (
@@ -56,7 +50,6 @@ const AllProducts = () => {
                   discount={item.discountPercentage}
                   rating={item.rating}
                   stock={item.stock}
-                  
                 />
               ))}
             </div>

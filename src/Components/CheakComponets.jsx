@@ -34,28 +34,21 @@ const CheakComponets = () => {
   }, [singleproduct]);
 
   useEffect(() => {
-    // ---------------single product api -----------
+    // Fetch single product and all products for category filtering
     axios
       .get(`https://dummyjson.com/products/${myparams.alus}`)
       .then((res) => setSingleproduct(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error("Error fetching product:", err));
 
-    // ------------all product appi---------
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setAllproduct(res.data.products))
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => console.error("Error fetching products:", err));
+  }, [myparams.alus]);
 
   const catagoryProduct = allproducts.filter(
     (item) => item.category == singleproduct?.category
   );
-
-  // console.log(singleproduct?.images?.lentg [0]);
-
-  // console.log(allproduct);
-
-  // console.log(singleproduct)
 
   // --------------product quantity---------
   const [quantity, setQuantity] = useState(1);
@@ -173,21 +166,28 @@ const CheakComponets = () => {
                "
               >
                 <div className="cart-update w-27.5 h-10 bg-[#E5E7EB] rounded-4xl flex justify-between items-center px-2 ">
-                  <button onClick={()=>{
-                       if(quantity == 1){
-                      console.log('ok')
-                    }else{
-                     setQuantity(quantity - 1) 
-                    }
-                  }} className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
+                  <button
+                    onClick={() => {
+                      if (quantity == 1) {
+                        return;
+                      } else {
+                        setQuantity(quantity - 1);
+                      }
+                    }}
+                    className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl "
+                  >
                     -
                   </button>
                   <h2 className="text-base font-medium font-poppins text-primery">
-                   {quantity}
+                    {quantity}
                   </h2>
-                  <button onClick={()=>{setQuantity (quantity + 1)}}
-                   className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl ">
-                  +
+                  <button
+                    onClick={() => {
+                      setQuantity(quantity + 1);
+                    }}
+                    className="w-6 h-6 bg-white border border-[#E5E7EB] flex justify-center items-center text-xs text-primery rounded-4xl "
+                  >
+                    +
                   </button>
                 </div>
 
@@ -227,7 +227,9 @@ const CheakComponets = () => {
                   Total
                 </p>
                 <p className="text-base font-semibold font-poppins text-primery">
-                { singleproduct.price * quantity }
+                  {singleproduct?.price
+                    ? (singleproduct.price * quantity).toFixed(2)
+                    : "N/A"}
                 </p>
               </div>
             </div>
