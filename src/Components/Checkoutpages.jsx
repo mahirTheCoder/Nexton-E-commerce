@@ -7,6 +7,18 @@ export default function Checkoutpages() {
   const [loading, setLoading] = useState(true);
 
 
+  // ------fetch products from api------
+  
+  useEffect(() => {
+    fetch("https://dummyjson.com/products?limit=2")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data.products.map((p) => ({ ...p, quantity: 1 })));
+        setLoading(false);
+      });
+  }, []);
+
+
 
   const subtotal = products.reduce((sum, p) => sum + p.price * p.quantity, 0);
   const shipping = 5;
@@ -211,8 +223,6 @@ export default function Checkoutpages() {
             Confirm order
           </button>
         </div>
-
-        
       </div>
     </section>
   );
