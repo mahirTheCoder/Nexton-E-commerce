@@ -185,7 +185,31 @@ export default function Checkoutpages() {
             </div>
           )}
 
-  
+          {/* --------sub total part------ */}
+
+          <div className="mt-5 py-2 text-sm text-[var(--color-primery)]">
+            <div className="flex justify-between">
+              <span>Subtotal</span>
+              <span>${subtotal.toFixed(2)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Shipping estimate</span>
+              <span>${shipping}.00</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Tax estimate</span>
+              <span>${tax}.00</span>
+            </div>
+          </div>
+
+          <div className="flex justify-between font-semibold text-lg mt-4 text-[var(--color-primery)]">
+            <span>Order total</span>
+            <span>${total.toFixed(2)}</span>
+          </div>
+
+          <button className="w-full bg-[var(--color-primery)] text-white py-3 mt-6 rounded-full hover:bg-gray-900 transition">
+            Confirm order
+          </button>
         </div>
 
         
