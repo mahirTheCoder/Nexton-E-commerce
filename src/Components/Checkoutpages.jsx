@@ -98,7 +98,39 @@ export default function Checkoutpages() {
             </div>
           </div>
 
-     
+          <div className="border border-gray-200 bg-white p-6 rounded-xl shadow-sm">
+            <div className="flex items-center gap-2 mb-10">
+              <FaCreditCard className="text-[var(--color-primery)]" />
+              <h2 className="font-semibold text-lg text-[var(--color-primery)]">
+                Payment
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              <input
+                type="text"
+                placeholder="Card number"
+                className="border border-gray-200 outline-none p-3 w-full rounded-lg"
+              />
+              <input
+                type="text"
+                placeholder="Name on the card"
+                className="border border-gray-200 outline-none p-3 w-full rounded-lg"
+              />
+              <div className="grid sm:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  placeholder="Expiration date (MM/YY)"
+                  className="border border-gray-200 outline-none p-3 rounded-lg"
+                />
+                <input
+                  type="text"
+                  placeholder="CVC"
+                  className="border border-gray-200 outline-none p-3 rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
 
