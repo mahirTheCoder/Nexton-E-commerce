@@ -18,7 +18,24 @@ export default function Checkoutpages() {
       });
   }, []);
 
-
+  // --------update quantity function------
+  const updateQuantity = (id, type) => {
+    setProducts((prev) =>
+      prev.map((p) =>
+        p.id === id
+          ? {
+              ...p,
+              quantity:
+                type === "inc"
+                  ? p.quantity + 1
+                  : p.quantity > 1
+                  ? p.quantity - 1
+                  : 1,
+            }
+          : p
+      )
+    );
+  };
 
   const subtotal = products.reduce((sum, p) => sum + p.price * p.quantity, 0);
   const shipping = 5;
