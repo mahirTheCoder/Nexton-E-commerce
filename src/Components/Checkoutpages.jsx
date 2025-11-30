@@ -135,7 +135,58 @@ export default function Checkoutpages() {
 
 
 
- 
+        {/* RIGHT SUMMARY */}
+        <div className="border border-gray-200 bg-white p-6 rounded-2xl shadow-sm h-fit">
+          <h2 className="font-semibold text-2xl mb-6 text-[var(--color-primery)]">
+            Order summary
+          </h2>
+
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
+            <div className="py-6">
+              {products.map((p) => (
+                <div
+                  key={p.id}
+                  className="flex gap-4 pb-4 pt-4 border-b border-gray-200"
+                >
+                  <img src={p.thumbnail} className="w-16 h-16 rounded-lg" />
+
+                  <div className="flex-1 ">
+                    <h3 className="font-medium text-[var(--color-primery)]">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm text-gray-500">One size</p>
+
+                    <div className="flex items-center gap-3 mt-6">
+                      <button
+                        className="p-1  border border-gray-200 rounded"
+                        onClick={() => updateQuantity(p.id, "dec")}
+                      >
+                        <AiOutlineMinus />
+                      </button>
+
+                      <span>{p.quantity}</span>
+
+                      <button
+                        className="p-1  border border-gray-200 rounded"
+                        onClick={() => updateQuantity(p.id, "inc")}
+                      >
+                        <AiOutlinePlus />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="text-right  font-semibold text-[var(--color-primery)]">
+                    ${(p.price * p.quantity).toFixed(2)}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+  
+        </div>
 
         
       </div>
