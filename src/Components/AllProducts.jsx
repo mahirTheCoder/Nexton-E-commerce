@@ -36,7 +36,7 @@ const AllProducts = () => {
         <div className="flex gap-10 mt-8">
 
           {/* 🟦 FIXED SIDEBAR */}
-          <div className="w-[260px] bg-white p-3 rounded-xl shadow-sm py-10 ">
+          <div className="w-[260px] p-3 rounded-xl   ">
 
             {/* Categories */}
             <div>
