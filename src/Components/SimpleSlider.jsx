@@ -60,7 +60,7 @@ const SimpleSlider = () => {
                     <div className="flex gap-2 items-center">
                       <Link
                         className="text-sm  text-[#4B5563] font-normal font-poppins"
-                        to={"/"}
+                        to={"/AllProducts"}
                       >
                         Shop Now
                       </Link>
@@ -85,7 +85,7 @@ const SimpleSlider = () => {
                     <div className="flex gap-2 items-center">
                       <Link
                         className="text-sm  text-[#4B5563] font-normal font-poppins"
-                        to={"/"}
+                        to={"/AllProducts"}
                       >
                         Shop Now
                       </Link>
@@ -110,7 +110,7 @@ const SimpleSlider = () => {
                     <div className="flex gap-2 items-center">
                       <Link
                         className="lg:text-sm text-sm  text-[#4B5563] font-normal font-poppins"
-                        to={"/"}
+                        to={"/AllProducts"}
                       >
                         Shop Now
                       </Link>
@@ -135,7 +135,7 @@ const SimpleSlider = () => {
                     <div className="flex gap-2 items-center">
                       <Link
                         className="lg:text-sm text-sm text-[#4B5563] font-normal font-poppins"
-                        to={"/"}
+                        to={"/AllProducts"}
                       >
                         Shop Now
                       </Link>
@@ -160,7 +160,7 @@ const SimpleSlider = () => {
                     <div className="flex gap-2 items-center">
                       <Link
                         className="lg:text-sm text-sm  text-[#4B5563] font-normal font-poppins"
-                        to={"/"}
+                        to={"/AllProducts"}
                       >
                         Shop Now
                       </Link>

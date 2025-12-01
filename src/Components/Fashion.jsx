@@ -19,7 +19,7 @@ const Fashion = () => {
                 The All New Fashion Collection Items
               </h2>
               <p  className="text-sm text-[#4B5563] font-poppins font-normal mb-6 ">Starting from: $59.99</p>
-              <Link className="w-[144px] h-[52px] bg-primery text-white flex justify-center items-center rounded-4xl" to={'/'}>Shop now</Link>
+              <Link className="w-[144px] h-[52px] bg-primery text-white flex justify-center items-center rounded-4xl" to={'/AllProducts'}>Shop now</Link>
             </div>
 
 

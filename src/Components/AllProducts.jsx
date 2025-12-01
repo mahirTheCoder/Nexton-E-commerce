@@ -36,7 +36,7 @@ const AllProducts = () => {
         <div className="flex gap-10 mt-8">
 
           {/* 🟦 SIDEBAR — Only Visible on Large Screens */}
-          <div className="hidden lg:block w-[260px] p-4 rounded-xl bg-white shadow-sm">
+          <div className="hidden lg:block w-[260px] p-4 rounded-xl bg-white">
 
             {/* Categories */}
             <div>
