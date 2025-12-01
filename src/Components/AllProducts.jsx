@@ -12,7 +12,6 @@ const AllProducts = () => {
   });
 
   const [priceRange, setPriceRange] = useState([0, 2000]);
-  const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
     axios
@@ -30,52 +29,41 @@ const AllProducts = () => {
 
   return (
     <section id="AllProducts" className="py-12">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
+        
         <BredCrums pagename={"All-Product"} />
 
         <div className="flex gap-10 mt-8">
 
-          {/* 🟦 FIXED SIDEBAR */}
-          <div className="w-[260px] p-3 rounded-xl   ">
+          {/* 🟦 SIDEBAR — Only Visible on Large Screens */}
+          <div className="hidden lg:block w-[260px] p-4 rounded-xl bg-white shadow-sm">
 
             {/* Categories */}
             <div>
               <h3 className="font-semibold mb-4 text-gray-800">Categories</h3>
-              <div className="flex flex-col gap-4 text-sm text-gray-700">
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Men's Fashion
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Women's Fashion
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Kids & Toys
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Accessories
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Cosmetics
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Shoes
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4" />
-                  Sports
-                </label>
+              <div className="flex flex-col gap-3 text-sm text-gray-700">
+                {[
+                  "Men's Fashion",
+                  "Women's Fashion",
+                  "Kids & Toys",
+                  "Accessories",
+                  "Cosmetics",
+                  "Shoes",
+                  "Sports",
+                ].map((cat, i) => (
+                  <label key={i} className="flex items-center gap-2">
+                    <input type="checkbox" className="w-4 h-4" />
+                    {cat}
+                  </label>
+                ))}
               </div>
             </div>
 
             {/* Price Range */}
             <div>
-              <h3 className="font-semibold mb-4 mt-10 text-gray-800">Price Range</h3>
+              <h3 className="font-semibold mb-4 mt-10 text-gray-800">
+                Price Range
+              </h3>
               <Slider
                 range
                 min={0}
@@ -91,38 +79,42 @@ const AllProducts = () => {
 
             {/* Sort */}
             <div>
-              <h3 className="font-semibold mb-4 text-gray-800">Sort Order</h3>
+              <h3 className="font-semibold mb-4 mt-10 text-gray-800">
+                Sort Order
+              </h3>
               <div className="flex flex-col gap-3 text-sm text-gray-700">
-                <label className="flex items-center gap-2">
-                  <input type="radio" name="sort" />
-                  Most Popular
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="radio" name="sort" />
-                  Best Rating
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="radio" name="sort" />
-                  Newest
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="radio" name="sort" />
-                  Low → High
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="radio" name="sort" />
-                  High → Low
-                </label>
+                {[
+                  "Most Popular",
+                  "Best Rating",
+                  "Newest",
+                  "Low → High",
+                  "High → Low",
+                ].map((label, i) => (
+                  <label key={i} className="flex items-center gap-2">
+                    <input type="radio" name="sort" />
+                    {label}
+                  </label>
+                ))}
               </div>
             </div>
-
           </div>
 
-          {/* 🟩 PRODUCT GRID */}
+          {/* 🟩 PRODUCTS GRID */}
           <div className="flex-1">
 
-            {/* Grid With Proper Gap + Bottom Padding */}
-            <div className="grid grid-cols-3  pb-20">
+            {/* GRID */}
+            <div
+              className="
+                grid 
+                grid-cols-1 
+                sm:grid-cols-2 
+                md:grid-cols-3 
+                lg:grid-cols-3 
+                xl:grid-cols-3 
+                gap-6 
+                pb-20
+              "
+            >
               {product.products?.map((item, i) => (
                 <RecCArt
                   key={i}
@@ -136,8 +128,8 @@ const AllProducts = () => {
               ))}
             </div>
 
-            {/* Pagination */}
-            <div className="flex justify-end mt-10 pt-5 border-t border-gray-200">
+            {/* PAGINATION */}
+            <div className="flex justify-center lg:justify-end mt-10 pt-5 border-t border-gray-200">
               <Pagination
                 showSizeChanger
                 onChange={onChangeItem}
@@ -147,7 +139,6 @@ const AllProducts = () => {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>
