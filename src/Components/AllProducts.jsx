@@ -89,7 +89,32 @@ const AllProducts = () => {
               </div>
             </div>
 
-
+            {/* Sort */}
+            <div>
+              <h3 className="font-semibold mb-4 text-gray-800">Sort Order</h3>
+              <div className="flex flex-col gap-3 text-sm text-gray-700">
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="sort" />
+                  Most Popular
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="sort" />
+                  Best Rating
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="sort" />
+                  Newest
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="sort" />
+                  Low → High
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="sort" />
+                  High → Low
+                </label>
+              </div>
+            </div>
 
           </div>
 
