@@ -73,7 +73,23 @@ const AllProducts = () => {
               </div>
             </div>
 
-     
+            {/* Price Range */}
+            <div>
+              <h3 className="font-semibold mb-4 mt-10 text-gray-800">Price Range</h3>
+              <Slider
+                range
+                min={0}
+                max={2000}
+                value={priceRange}
+                onChange={setPriceRange}
+              />
+              <div className="flex justify-between text-sm mt-2 text-gray-600">
+                <span>Min: ${priceRange[0]}</span>
+                <span>Max: ${priceRange[1]}</span>
+              </div>
+            </div>
+
+
 
           </div>
 
