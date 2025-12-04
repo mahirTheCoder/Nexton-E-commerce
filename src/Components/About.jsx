@@ -90,7 +90,33 @@ const About = () => {
 
           {/* RIGHT CONTACT FORM */}
           <div>
-   
+            <form className="flex flex-col gap-4">
+
+              {/* Name Input */}
+              <input
+                type="text"
+                placeholder="Full name"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400"
+              />
+
+              {/* Email Input */}
+              <input
+                type="email"
+                placeholder="Email address"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400"
+              />
+
+              {/* Message Box */}
+              <textarea
+                placeholder="Message"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 h-40 outline-none resize-none focus:ring-2 focus:ring-blue-400"
+              ></textarea>
+
+              {/* Submit Button */}
+              <button className="bg-[#111827] text-white py-3 rounded-lg hover:bg-black transition">
+                Send Message
+              </button>
+            </form>
           </div>
 
         </div>
