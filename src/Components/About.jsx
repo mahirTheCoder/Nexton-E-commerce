@@ -56,7 +56,34 @@ const About = () => {
           ></div>
         </div>
 
-    
+        {/* --------------------- CONTACT AREA --------------------- */}
+        <div className="grid grid-cols-2 gap-16 mt-12">
+
+          {/* LEFT CONTACT DETAILS */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Get in touch with us</h3>
+
+            <div className="mb-6">
+              <h4 className="font-medium">Address</h4>
+              <p className="text-sm text-gray-600">
+                Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="font-medium">Email</h4>
+              <p className="text-sm text-gray-600">nexton@example.com</p>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="font-medium">Phone</h4>
+              <p className="text-sm text-gray-600">000-123-456-7890</p>
+            </div>
+
+     
+          </div>
+
+        </div>
       </section>
     </>
   );
