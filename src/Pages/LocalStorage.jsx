@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react'
+import About from '../Components/About'
 
 const LocalStorage = () => {
-  return <></>;
-};
+  return (
+    <>
+    
+    <About/>
+    </>
+  )
+}
 
-export default LocalStorage;
+export default LocalStorage
