@@ -80,7 +80,17 @@ const About = () => {
               <p className="text-sm text-gray-600">000-123-456-7890</p>
             </div>
 
-     
+            {/* Social Icons */}
+            <div className="flex items-center gap-3 mt-4">
+              <FaFacebookF className="text-blue-600 text-xl cursor-pointer" />
+              <FaInstagram className="text-pink-500 text-xl cursor-pointer" />
+              <FaLinkedinIn className="text-blue-700 text-xl cursor-pointer" />
+            </div>
+          </div>
+
+          {/* RIGHT CONTACT FORM */}
+          <div>
+   
           </div>
 
         </div>
